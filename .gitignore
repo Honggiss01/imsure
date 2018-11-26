@@ -138,6 +138,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # config files
-src/resources/app.properties
+src/main/webapp/resources/app.properties
 src/main/webapp/WEB-INF/spring/mail-config.xml
 # End of https://www.gitignore.io/api/java,maven,windows,eclipse,java-web
