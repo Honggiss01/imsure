@@ -31,6 +31,10 @@ h6 {
 	color: azure;
 }
 
+.head-title:hover {
+	color: azure;
+}
+
 .head-subtitle {
 	color: cornsilk;
 }

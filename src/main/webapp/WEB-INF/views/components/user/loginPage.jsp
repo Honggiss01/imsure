@@ -19,8 +19,8 @@
         
         <div class="wrap-input100 validate-input m-t-85 m-b-35"
           data-validate="Enter username">
-          <input class="input100" type="text" name="username"> <span
-            class="focus-input100" data-placeholder="이메일 예시)test@email.com"></span>
+          <input class="input100" type="text" name="email"> <span
+            class="focus-input100" data-placeholder="test@email.com"></span>
         </div>
 
         <div class="wrap-input100 validate-input m-b-50"

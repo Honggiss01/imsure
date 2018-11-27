@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" %>
 <header>
-  <h1 class="head-title">&#8544'MSURE</h1>
+  <h1>
+    <a class="nav-a head-title" href="mainPage" onclick="Router.routeWithATag(this, event, 'section');"> &#8544'MSURE </a>
+  </h1>
 </header>
