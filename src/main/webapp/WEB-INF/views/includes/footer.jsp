@@ -5,30 +5,24 @@
   <div class="container">
     <ul class="list-inline mb-5 footer-contributors">
       <li class="list-inline-item">
-        <a class="social-link rounded-circle text-primary" href="https://github.com/Honggiss01"> 
-          <i class="icon-social-github"></i>
+        <a class="social-link rounded-circle text-primary" href="tel:010-4108-7687"> 
+          <i class="icon-phone"></i>
         </a>
-        <span class="text-muted small mb-0">HongGi, Kim</span>
-       </li>
-      <li class="list-inline-item">
-        <a class="social-link rounded-circle text-primary" href="https://github.com/hisena"> 
-          <i class="icon-social-github"></i>
-        </a>
-        <span class="text-muted small mb-0">SeaEun, Ryu</span>
        </li>
        <li class="list-inline-item">
-        <a class="social-link rounded-circle text-primary" href="https://github.com/SoYeonV"> 
-          <i class="icon-social-github"></i>
+        <a class="social-link rounded-circle text-primary" href="mailto:seungeun.data@gmail.com"> 
+          <i class="icon-envelope-open"></i>
         </a>
-        <span class="text-muted small mb-0">SoYeon, Park</span>
       </li>
        <li class="list-inline-item">
-        <a class="social-link rounded-circle text-primary" href="https://github.com/leeseungeun"> 
+        <a class="social-link rounded-circle text-primary" href="https://github.com/Honggiss01/imsure"> 
           <i class="icon-social-github"></i>
         </a>
-        <span class="text-muted small mb-0">SeungEun, Lee</span>
       </li>
     </ul>
+    <p class="text-muted small mb-0">
+      Contributors : HongGi, Kim / SeaEun, Ryu / SoYeon, Park / SeungEun, Lee
+    </p>
     <p class="text-muted small mb-0">
       Copyright &copy; Team Macadamia 2018
     </p>

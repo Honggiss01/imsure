@@ -27,6 +27,24 @@ h6 {
   font-weight: 700;
 }
 
+.head-title {
+	color: azure;
+}
+
+.head-subtitle {
+	color: cornsilk;
+}
+
+header {
+	width: 100%;
+	height: 20%;
+	background-color: #30b1b2;
+}
+
+header > * {
+	padding: 15px 20px;
+}
+
 /* Side Menu */
 #sidebar-wrapper {
   position: fixed;

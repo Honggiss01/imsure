@@ -36,28 +36,28 @@
       <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
           <li class="sidebar-brand">
-            <a class="nav-a" href="mainPage">메인</a>
+            <a class="nav-a js-scroll-trigger" href="mainPage">메인</a>
           </li>
           <li class="sidebar-nav-item">
-            <a class="nav-a" href="">
+            <a class="nav-a js-scroll-trigger" href="loginPage">
              <i class="icon-login"></i>
              <span>로그인</span>
             </a>
           </li>
           <li class="sidebar-nav-item">
-            <a class="nav-a" href="#about">
+            <a class="nav-a js-scroll-trigger" href="#about">
               <i class="icon-heart big-nav-icon"></i>
               <span>심리 지표로 <br/>생명보험 추천받기</span>
             </a>
           </li>
           <li class="sidebar-nav-item">
-            <a class="nav-a" href="#services">
+            <a class="nav-a js-scroll-trigger" href="#services">
               <i class="icon-people big-nav-icon"></i>
               <span>인구통계 지표로 <br/>생명보험 추천받기</span>
             </a>
           </li>
           <li class="sidebar-nav-item">
-            <a class="nav-a" href="#portfolio">
+            <a class="nav-a js-scroll-trigger" href="#portfolio">
               <i class="icon-list"></i>
               <span>내 보험 관리하기</span>
             </a>

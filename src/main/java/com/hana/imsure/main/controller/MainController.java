@@ -25,4 +25,12 @@ public class MainController {
 		return "components/main/mainPage";
 	}
 	
+	@GetMapping("/loginPage")
+	public String loginPage() {
+		
+		log.debug("loginPage.jsp called");
+		
+		return "components/user/loginPage";
+	}
+	
 }
