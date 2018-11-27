@@ -1,6 +1,25 @@
 
-# Created by https://www.gitignore.io/api/java,maven,windows,eclipse,java-web
-# Edit at https://www.gitignore.io/?templates=java,maven,windows,eclipse,java-web
+# Created by https://www.gitignore.io/api/java,maven,windows,eclipse,java-web,Vim
+# Edit at https://www.gitignore.io/?templates=java,maven,windows,eclipse,java-web,Vim
+
+### Vim ###
+# Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Session
+Session.vim
+
+# Temporary
+.netrwhist
+*~
+# Auto-generated tag files
+tags
+# Persistent undo
+[._]*.un~
 
 ### Eclipse ###
 
@@ -138,7 +157,8 @@ $RECYCLE.BIN/
 *.lnk
 
 # config files
-src/main/webapp/resources/app.properties
+src/main/resources/app.properties
 src/test/resources/app.properties
 src/main/webapp/WEB-INF/spring/mail-config.xml
-# End of https://www.gitignore.io/api/java,maven,windows,eclipse,java-web
+src/main/webapp/resources/vendor/*
+# End of https://www.gitignore.io/api/java,maven,windows,eclipse,java-web,Vim
