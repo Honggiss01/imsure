@@ -10,7 +10,7 @@
 
     <!-- title -->
     <title>I'MSURE</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/resources/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/resources/img/common/favicon.ico">
 
     <!-- Bootstrap Core CSS -->
     <link href="resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
