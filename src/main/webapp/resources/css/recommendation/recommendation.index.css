@@ -178,11 +178,11 @@
   /*margin-left:-12px;*/
 }
 .radio.type2.on::before{
-  background:url(./img/sprite.png) no-repeat -110px 0;
+  background:black ;
   border:0 none;
 }
 .radio.type3.on::before{
-  background:url(./img/sprite.png) no-repeat -110px -35px;
+  background:black;
   border:0 none;
 }
 .radio + input[type=radio]{
@@ -623,8 +623,8 @@ p.control-label.is-padding{
   }
   .col-sm-10.recommend-chk li {
     float:left;
-    width:50%;
-    text-align:left;
+    width:48%;
+    /*text-align:left;*/
   }
   .col-sm-10.recommend-chk li:nth-child(1) {
     padding-right:5px;

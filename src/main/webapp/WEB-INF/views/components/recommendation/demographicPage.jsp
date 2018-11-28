@@ -1,10 +1,6 @@
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<link rel="stylesheet" type="text/css" href="resources/vendor/animate/animate.css">
-<link rel="stylesheet" type="text/css" href="resources/vendor/css-hamburgers/hamburgers.min.css">
-<link rel="stylesheet" type="text/css" href="resources/vendor/animsition/css/animsition.min.css">
-<link rel="stylesheet" type="text/css" href="resources/vendor/select2/select2.min.css">
-<link rel="stylesheet" type="text/css" href="resources/vendor/daterangepicker/daterangepicker.css">
+
 <link rel="stylesheet" type="text/css" href="resources/css/recommendation/recommendation.common.css">
 <link rel="stylesheet" type="text/css" href="resources/css/recommendation/recommendation.index.css">
 
@@ -32,14 +28,21 @@
                         <div class="form-group">
                             <label class="control-label col-sm-2" style="width:10%;">성별</label>
                             <ul class="col-sm-10 sex" style="width:70%;float:right">
-                                <li  style="width:50%;float:left">
-                                    <label for="male" class="radio male" style="width:95%">남자</label>
-                                    <input type="radio"  id="male" name="gender"  value="남자" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <li  style="width:48%;float:left">
+                                    <label for="male" class="radio male" style="width:48%;position:absolute;">남자 </label>
+                                    <input type="radio"  style="float:left" id="male" name="gender"  value="남자" class="ng-pristine ng-untouched ng-valid ng-not-empty"
+                                    style="position:relative;">
                                 </li>
-                                <li  style="width:50%;float:right">
-                                    <label for="female" class="radio female" style="width:95%" >여자</label>
-                                    <input type="radio"  id="female" name="gender"  value="여자" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <li  style="width:48%;float:right">
+                                    <label for="female" class="radio female on" style="width:48%;position:absolute;" >여자</label>
+                                    <input type="radio"  id="female" name="gender"  value="여자" class="ng-untouched ng-valid ng-not-empty ng-dirty ng-valid-parse"
+                                    style="position:relative;">
                                 </li>
+                                
+                                <!-- <li class="radio-inline">
+                                    <label for="female" class="radio female on">여자</label>
+                                    <input type="radio" id="female" name="gender" ng-model="inSex" value="여자" class="ng-untouched ng-valid ng-not-empty ng-dirty ng-valid-parse" style="">
+                                </li> -->
                             </ul>
                         </div>
                         <div class="form-group">
@@ -54,19 +57,23 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-2" style="width:10%;">결혼여부</label>
+                            <label class="control-label col-sm-2" style="width:10%;float:left">결혼여부</label>
                             <ul class="col-sm-10 recommend-chk" style="width:70%;float:right">
-                                <li class="radio-inline" style="width:50%;float:left">
-                                    <label for="married" class="radio type2 married" ng-class="{on:inMarry=='기혼'}">기혼</label>
-                                    <input type="radio" id="married" name="marry" ng-model="inMarry" value="기혼" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <li style="width:50%;float:left">
+                                    <label for="married" class="radio type2 married on" style="width:48%;position:absolute;">기혼</label>
+                                    <input type="radio" id="married" name="marry"  value="기혼" class="ng-pristine ng-untouched ng-valid ng-not-empty">
                                 </li>
-                                <li class="radio-inline" style="width:50%;float:right">
-                                    <label for="single" class="radio type2 single on" ng-class="{on:inMarry=='미혼'}">미혼</label>
-                                    <input type="radio" id="single" name="marry" ng-model="inMarry" value="미혼" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <li  style="width:50%;float:right">
+                                    <label for="single" class="radio type2 single" style="width:48%;position:absolute;" >미혼</label>
+                                    <input type="radio" id="single" name="marry"  value="미혼" class="ng-pristine ng-untouched ng-valid ng-not-empty">
                                 </li>
                             </ul>
                         </div>
-                        <div class="form-group sub-radio married" id="married_div" style="display: none;">
+                        
+                        
+                        
+                        <!-- style="display: none;"추가 -->
+                        <div class="form-group" id="married_div" >
                             <div class="in-sub">
                                 <p class="control-label col-sm-2">자녀유무</p>
                                 <ul class="col-sm-10 recommend-chk">
@@ -95,7 +102,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group sub-radio single on" id="single_div" style="display: block;">
+                        <!-- style="display: block;"추가 -->
+                        <div class="form-group" id="single_div" >
                             <div class="in-sub">
                                 <p class="control-label col-sm-2 notice">부양가족
                                     <small>(부모,형제,조부모 등)</small>
@@ -122,9 +130,9 @@
                             <p class="notice type2">
                                 <small>매월 생활비로 드리는 금액을 만단위로 입력해 주세요.</small>
                             </p>
-                        </div>
-
+                        </div> 
                     </form>
+                    
                     <div class="btn-block btn-input">
                         <p class="notice errormsg" style="display: none;">
                             <small class="ng-binding" style="color: rgb(255, 0, 0);"></small>
@@ -132,6 +140,9 @@
                         <button class="btn btn-next next" ng-readonly="next1Check()">다음 단계</button>
                     </div>
                 </div>
+                
+                
+                
                 <div class="form-area step-2">
                     <form class="form-horizontal form-type2 ng-pristine ng-valid ng-valid-maxlength" role="form">
                         <div class="form-group">
@@ -220,9 +231,16 @@
 
 <!-- JavaScript -->
 <!-- Plugins -->
-<script src="resources/vendor/animsition/js/animsition.min.js"></script>
-<script src="resources/vendor/bootstrap/js/popper.min.js"></script>
-<script src="resources/vendor/select2/select2.min.js"></script>
-<script src="resources/vendor/daterangepicker/moment.min.js"></script>
-<script src="resources/vendor/daterangepicker/daterangepicker.js"></script>
-<script src="resources/vendor/countdowntime/countdowntime.js"></script>
+
+
+<script src="jquery-3.3.1.min.js">
+$(document).ready(function(){
+	console.log("여기 들어옴?")
+
+	$('.ng-pristine ng-untouched ng-valid ng-not-emptygender').on('click', function(){
+		var value = $(this).val;
+		console.log(value);
+	});
+
+});
+</script>
