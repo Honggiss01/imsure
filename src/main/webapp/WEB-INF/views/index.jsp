@@ -33,6 +33,7 @@
       <a class="menu-toggle rounded" href="#">
         <i class="fas fa-bars"></i>
       </a>
+      <!-- active 되는 부분 -->
       <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
           <li class="sidebar-brand">
@@ -51,7 +52,7 @@
             </a>
           </li>
           <li class="sidebar-nav-item">
-            <a class="nav-a js-scroll-trigger" href="#services">
+            <a class="nav-a js-scroll-trigger" href="demographicPage">
               <i class="icon-people big-nav-icon"></i>
               <span>인구통계 지표로 <br/>생명보험 추천받기</span>
             </a>

@@ -33,4 +33,12 @@ public class MainController {
 		return "components/user/loginPage";
 	}
 	
+	@GetMapping("/demographicPage")
+	public String demographicPage() {
+		
+		log.debug("demographicPage.jsp called");
+		
+		return "components/recommendation/demographicPage";
+	}
+	
 }
