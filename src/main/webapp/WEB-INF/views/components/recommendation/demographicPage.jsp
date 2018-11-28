@@ -3,6 +3,7 @@
 
 <link rel="stylesheet" type="text/css" href="resources/css/recommendation/recommendation.common.css">
 <link rel="stylesheet" type="text/css" href="resources/css/recommendation/recommendation.index.css">
+<link rel="stylesheet" type="text/css" href="resources/css/recommendation/recommendation.themes.css">
 
 
 <!-- header -->
@@ -26,17 +27,15 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-2" style="width:10%;">성별</label>
-                            <ul class="col-sm-10 sex" style="width:70%;float:right">
+                            <label class="control-label col-sm-2" >성별</label>
+                            <ul class="col-sm-10 sex" style="width:70%;float:right;margin-top:1em;">
                                 <li  style="width:48%;float:left">
-                                    <label for="male" class="radio male" style="width:48%;position:absolute;">남자 </label>
-                                    <input type="radio"  style="float:left" id="male" name="gender"  value="남자" class="ng-pristine ng-untouched ng-valid ng-not-empty"
-                                    style="position:relative;">
+                                    <input type="radio" id="male"name="gender" value="남자">
+                                    <label for="male" >남자</label>
                                 </li>
                                 <li  style="width:48%;float:right">
-                                    <label for="female" class="radio female on" style="width:48%;position:absolute;" >여자</label>
-                                    <input type="radio"  id="female" name="gender"  value="여자" class="ng-untouched ng-valid ng-not-empty ng-dirty ng-valid-parse"
-                                    style="position:relative;">
+                                    <input type="radio" id="female"name="gender" value="여자">
+                                    <label for="female" >여자</label>
                                 </li>
 
                             </ul>
@@ -55,30 +54,30 @@
                         <!-- style="display: none;"추가 -->
                        <div class="form-group">
                             <div class="form-group">
-                              <label class="control-label col-sm-2" style="width:10%;float:left">결혼여부</label>
+                              <label class="control-label col-sm-2" >결혼여부</label>
                               <ul class="col-sm-10 recommend-chk" style="width:70%;float:right">
-                                <li style="width:50%;float:left">
-                                  <label for="married" class="radio type2 married on" style="width:48%;position:absolute;">기혼</label>
-                                  <input type="radio" id="married" name="marry"  value="기혼" class="ng-pristine ng-untouched ng-valid ng-not-empty">
-                                </li>
+                                <li style="width:50%;float:left;margin-top:1px">
+                                  <input type="radio" id="married" name="marry" value="기혼">
+                                  <label for="married" >기혼</label>
+                                  </li>
                                 <li  style="width:50%;float:right">
-                                  <label for="single" class="radio type2 single" style="width:48%;position:absolute;" >미혼</label>
-                                  <input type="radio" id="single" name="marry"  value="미혼" class="ng-pristine ng-untouched ng-valid ng-not-empty">
-                                </li>
+                                  <input type="radio" id="single" name="marry" value="미혼">
+                                  <label for="single" >미혼</label>
+                                  </li>
                               </ul>
                             </div>
                             <!-- 결혼 '유' 선택했을 경우 추가 -->
                             <div class="form-group">
-                              <label class="control-label col-sm-2" style="width:10%;float:left">자녀유무</label>
+                              <label class="control-label col-sm-2" >자녀유무</label>
                               <ul class="col-sm-10 recommend-chk" style="width:70%;float:right">
                                 <li style="width:50%;float:left">
-                                  <label for="child-has" class="radio type3 addOn" style="width:48%;position:absolute;">유</label>
-                                  <input type="radio" id="child-has" name="child" ng-model="inChild" value="유"  class="ng-pristine ng-untouched ng-valid ng-not-empty">
-                                </li>
+                                  <input type="radio" id="child-has" name="child" value="유">
+                                  <label for="child-has" >유</label>
+                                  </li>
                                 <li style="width:50%;float:right">
-                                  <label for="child-none" class="radio type3 addNot on" style="width:48%;position:absolute;">무</label>
-                                  <input type="radio" id="child-none" name="child" ng-model="inChild" value="무"  class="ng-pristine ng-untouched ng-valid ng-not-empty" checked="checked">
-                                </li>
+                                  <input type="radio" id="child-none" name="child" value="무">
+                                  <label for="child-none" >무</label>
+                                  </li>
                               </ul>
                             </div>
                             <div class="form-group">
@@ -97,17 +96,17 @@
                         <!-- style="display: block;"추가 -->
                         <div class="form-group" >
                             <div class="form-group">
-                                <label class="control-label col-sm-2" style="width:10%;float:left">부양가족
+                                <label class="control-label col-sm-2" >부양가족
                                     
                                 </label>
                                 <ul class="col-sm-10 recommend-chk" style="width:70%;float:right">
                                     <li style="width:50%;float:left">
-                                        <label for="fam-has" class="radio type3 addOn"style="width:48%;position:absolute;">유</label>
-                                        <input type="radio" id="fam-has" name="family" ng-model="inFamily" value="유" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                        <input type="radio" id="fam-has" name="family" value="유">
+                                        <label for="fam-has" >유</label>
                                     </li>
                                     <li style="width:50%;float:right">
-                                        <label for="fam-none" class="radio type3 addNot on" style="width:48%;position:absolute;">무</label>
-                                        <input type="radio" id="fam-none" name="family" ng-model="inFamily" value="무" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                        <input type="radio" id="fam-none" name="family" value="무">
+                                        <label for="fam-none" >무</label>
                                     </li>  
                                 </ul>
                             </div>
@@ -124,8 +123,8 @@
                 </div>
                 
                 
-                
-                <div class="form-area step-2">
+                <!-- step-2 -->
+                <div class="form-area on">
                     <form class="form-horizontal form-type2 ng-pristine ng-valid ng-valid-maxlength" role="form">
                         <div class="form-group">
                             <label class="control-label col-sm-4" for="salary">월소득</label>
