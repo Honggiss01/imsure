@@ -46,7 +46,7 @@
             </a>
           </li>
           <li class="sidebar-nav-item">
-            <a class="nav-a js-scroll-trigger" href="#about">
+            <a class="nav-a js-scroll-trigger" href="psychologicPage">
               <i class="icon-heart big-nav-icon"></i>
               <span>심리 지표로 <br/>생명보험 추천받기</span>
             </a>
