@@ -33,6 +33,7 @@ h6 {
 
 .head-title:hover {
 	color: azure;
+	text-decoration: none;
 }
 
 .head-subtitle {
