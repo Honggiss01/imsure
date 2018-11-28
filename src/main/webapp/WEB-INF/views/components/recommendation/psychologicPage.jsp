@@ -8,27 +8,27 @@
 <article class="container ng-scope" >
     <section id="recommend" class="wrapper row">
         <div class="forms step-area">
+            <h1 class="likert-header">심리 검사하기</h1>
             <div class="bgChange">
                 <ul class="nav nav-tabs tabType2">
                 <!-- 선택했을때 이벤트 처리! -->
-                    <li class="btn-tab01 on">1 STEP</li>
-                    <li class="btn-tab02 shadow">2 STEP</li>
-                    <li class="btn-tab03 shadow">3 STEP</li>
-                    <li class="btn-tab02 shadow">4 STEP</li>
-                    <li class="btn-tab02 shadow">5 STEP</li>
+                    <li class="btn-tab01 step-tab on">1 STEP</li>
+                    <li class="btn-tab02 step-tab shadow">2 STEP</li>
+                    <li class="btn-tab03 step-tab shadow">3 STEP</li>
+                    <li class="btn-tab04 step-tab shadow">4 STEP</li>
+                    <li class="btn-tab05 step-tab shadow">5 STEP</li>
                 </ul>
                 <div class="form-area on">
-                  <h1 class="likert-header">This is a Likert Scale survey</h1>
                   <form action="">
-                    <label class="statement">This HTML Likert scale is easy to use.</label>
+                    <label class="statement">1. 문항입니다.샘플입니다</label>
                     <ul class='likert'>
                       <li>
                         <input type="radio" name="likert" value="strong_agree">
-                        <label>Strongly agree</label>
+                        <label>매우 그러하다</label>
                       </li>
                       <li>
                         <input type="radio" name="likert" value="strong_agree">
-                        <label>Agree</label>
+                        <label>그러하다</label>
                       </li>
                       <li>
                         <input type="radio" name="likert" value="strong_agree">
@@ -299,14 +299,23 @@
 <style>
 h1.likert-header {
   padding-left:4.25%;
-  margin:20px 0 0;
+  margin:20px 0 40px;
+}
+.forms {
+  width: 100%;
+}
+.step-tab {
+  width: 20% !important;
+}
+.bgChange {
+  padding-left: 4.25%;
 }
 form .statement {
   display:block;
-  font-size: 14px;
+  font-size: 16pt;
   font-weight: bold;
   padding: 30px 0 0 4.25%;
-  margin-bottom:10px;
+  margin-bottom:30px;
 }
 form .likert {
   list-style:none;
@@ -320,7 +329,7 @@ form .likert:last-of-type {border-bottom:0;}
 form .likert:before {
   content: '';
   position:relative;
-  top:11px;
+  top:8px;
   left:9.5%;
   display:block;
   background-color:#efefef;
@@ -341,11 +350,15 @@ form .likert li input[type=radio] {
   margin-left:-6px;
   
 }
-form .likert li label {width:100%;}
+form .likert li label {
+  width:100%;
+  margin-top: 20px;
+}
 form .buttons {
   margin:30px 0;
   padding:0 4.25%;
-  text-align:right
+  text-align:right;
+  font-size: 10.5pt;
 } 
 form .buttons button {
   padding: 5px 10px;
