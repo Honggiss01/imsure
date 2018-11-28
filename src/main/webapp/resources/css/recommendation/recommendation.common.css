@@ -1505,11 +1505,11 @@ main contents
 header#header {
 	opacity: 1;
 }
-nav {
+/*nav {
 	height: 966px;
 	max-height: 965px;
 	margin-top: 0;
-	/* padding:15px 45px 15px 15px; */
+	 padding:15px 45px 15px 15px; 
 	position: absolute;
 	top: 58px;
 	right: calc(-100% + 40px);
@@ -1519,7 +1519,7 @@ nav {
 }
 nav > ul {
 	float: none;
-}
+}*/
 .lnb li {
 	height: auto
 }

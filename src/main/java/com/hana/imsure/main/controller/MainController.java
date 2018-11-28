@@ -41,4 +41,12 @@ public class MainController {
 		return "components/recommendation/demographicPage";
 	}
 	
+	@GetMapping("/demographicResultPage")
+	public String demographicResultPage() {
+		
+		log.debug("demographicResultPage.jsp called");
+		
+		return "components/recommendation/demographicResultPage";
+	}
+	
 }
