@@ -33,12 +33,12 @@
                             <label class="control-label col-sm-2" style="width:10%;">성별</label>
                             <ul class="col-sm-10 sex" style="width:70%;float:right">
                                 <li  style="width:50%;float:left">
-                                    <label for="male" class="radio male" style="width:100%">남자</label>
-                                    <input type="radio"  id="male" name="gender" ng-model="inSex" value="남자" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                    <label for="male" class="radio male" style="width:95%">남자</label>
+                                    <input type="radio"  id="male" name="gender"  value="남자" class="ng-pristine ng-untouched ng-valid ng-not-empty">
                                 </li>
-                                <li class="radio-inline" style="width:50%;float:right">
-                                    <label for="female" style="width:100%" class="radio female on">여자</label>
-                                    <input type="radio"  id="female" name="gender" ng-model="inSex" value="여자" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <li  style="width:50%;float:right">
+                                    <label for="female" class="radio female" style="width:95%" >여자</label>
+                                    <input type="radio"  id="female" name="gender"  value="여자" class="ng-pristine ng-untouched ng-valid ng-not-empty">
                                 </li>
                             </ul>
                         </div>
@@ -54,7 +54,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <p class="control-label col-sm-2" style="width:10%;">결혼여부</p>
+                            <label class="control-label col-sm-2" style="width:10%;">결혼여부</label>
                             <ul class="col-sm-10 recommend-chk" style="width:70%;float:right">
                                 <li class="radio-inline" style="width:50%;float:left">
                                     <label for="married" class="radio type2 married" ng-class="{on:inMarry=='기혼'}">기혼</label>

@@ -134,7 +134,7 @@
   padding:0;
   position:relative;
   display: inline-block;
-  /*width: 48%*/; line-height: 32px;
+  width: 2%; line-height: 32px;
 }
 .col-sm-10 > p{
   text-align:left;
