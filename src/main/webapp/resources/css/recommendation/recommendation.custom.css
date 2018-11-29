@@ -1,0 +1,20 @@
+.col-sm-10.sex, .col-sm-10.recommend-chk{
+	
+	width:70%;
+	float:right;
+	margin-top:0.5rem;
+}
+
+.col-sm-10.input-area,
+.col-sm-8.input-area{
+	width:70%;float:right
+}
+.custom-li-left{
+	width:48%;
+	float:left;
+}
+
+.custom-li-right{
+	width:48%;
+	float:right;
+}

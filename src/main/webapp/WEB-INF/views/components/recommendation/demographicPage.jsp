@@ -4,6 +4,7 @@
 <link rel="stylesheet" type="text/css" href="resources/css/recommendation/recommendation.common.css">
 <link rel="stylesheet" type="text/css" href="resources/css/recommendation/recommendation.index.css">
 <link rel="stylesheet" type="text/css" href="resources/css/recommendation/recommendation.themes.css">
+<link rel="stylesheet" type="text/css" href="resources/css/recommendation/recommendation.custom.css">
 
 
 <!-- header -->
@@ -21,19 +22,19 @@
                 <div class="form-area on">
                     <form class="form-horizontal ng-pristine ng-valid ng-valid-maxlength" role="form">
                         <div class="form-group">
-                            <label class="control-label col-sm-2" for="user" style="width:10%;">이름</label>
-                            <div style="width:70%;float:right" class="col-sm-10 input-area" >
+                            <label class="control-label col-sm-2" for="user" >이름</label>
+                            <div class="col-sm-10 input-area" >
                                 <input type="text"  class="form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-maxlength" id="user" ng-model="inName" maxlength="12" ng-maxlength="12" placeholder="이름을 입력하세요" kr-input="">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-sm-2" >성별</label>
-                            <ul class="col-sm-10 sex" style="width:70%;float:right;margin-top:1em;">
-                                <li  style="width:48%;float:left">
+                            <ul class="col-sm-10 sex" >
+                                <li class="custom-li-left" >
                                     <input type="radio" id="male"name="gender" value="남자">
                                     <label for="male" >남자</label>
                                 </li>
-                                <li  style="width:48%;float:right">
+                                <li class="custom-li-right">
                                     <input type="radio" id="female"name="gender" value="여자">
                                     <label for="female" >여자</label>
                                 </li>
@@ -41,8 +42,8 @@
                             </ul>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-2" for="birth-d" style="width:10%;">생년월일</label>
-                            <div class="col-sm-10 input-area" style="width:70%;float:right">
+                            <label class="control-label col-sm-2" for="birth-d">생년월일</label>
+                            <div class="col-sm-10 input-area">
                                 <input type="text" class="form-control onlyNumber ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-maxlength" id="birth-d" ng-model="inAge" maxlength="8" placeholder="예) 1990212" ng-blur="ageCheck()">
                                 <p class="notice is-pl">
                                     <small>
@@ -55,12 +56,12 @@
                        <div class="form-group">
                             <div class="form-group">
                               <label class="control-label col-sm-2" >결혼여부</label>
-                              <ul class="col-sm-10 recommend-chk" style="width:70%;float:right">
-                                <li style="width:50%;float:left;margin-top:1px">
+                              <ul class="col-sm-10 recommend-chk" >
+                                <li class="custom-li-left">
                                   <input type="radio" id="married" name="marry" value="기혼">
                                   <label for="married" >기혼</label>
                                   </li>
-                                <li  style="width:50%;float:right">
+                                <li class="custom-li-right">
                                   <input type="radio" id="single" name="marry" value="미혼">
                                   <label for="single" >미혼</label>
                                   </li>
@@ -69,12 +70,12 @@
                             <!-- 결혼 '유' 선택했을 경우 추가 -->
                             <div class="form-group">
                               <label class="control-label col-sm-2" >자녀유무</label>
-                              <ul class="col-sm-10 recommend-chk" style="width:70%;float:right">
-                                <li style="width:50%;float:left">
+                              <ul class="col-sm-10 recommend-chk">
+                                <li class="custom-li-left">
                                   <input type="radio" id="child-has" name="child" value="유">
                                   <label for="child-has" >유</label>
                                   </li>
-                                <li style="width:50%;float:right">
+                                <li class="custom-li-right">
                                   <input type="radio" id="child-none" name="child" value="무">
                                   <label for="child-none" >무</label>
                                   </li>
@@ -99,12 +100,12 @@
                                 <label class="control-label col-sm-2" >부양가족
                                     
                                 </label>
-                                <ul class="col-sm-10 recommend-chk" style="width:70%;float:right">
-                                    <li style="width:50%;float:left">
+                                <ul class="col-sm-10 recommend-chk">
+                                    <li class="custom-li-left">
                                         <input type="radio" id="fam-has" name="family" value="유">
                                         <label for="fam-has" >유</label>
                                     </li>
-                                    <li style="width:50%;float:right">
+                                    <li class="custom-li-right">
                                         <input type="radio" id="fam-none" name="family" value="무">
                                         <label for="fam-none" >무</label>
                                     </li>  
@@ -136,19 +137,26 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="control-label col-sm-4 type2" for="employment">최초입사년도/<br>국민연급 가입시기</label>
-                            <div class="col-sm-8 input-area">
-                                <input type="text" class="form-control onlyNumber ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-maxlength" id="employment" ng-model="inEmployment" maxlength="4" placeholder="예) 1990" ng-blur="jobStartCheck()">
-                                <span>년도</span>
-                                <p class="notice">
-                                    <small>최초 근로소득 또는 사업소득이 발생한 년도를 기입하세요.</small>
-                                </p>
-                            </div>
-                        </div>
+                        <!-- 암가족력이 있는지 물어보는거 추가 -->
                         <div class="form-group type-height">
                             <p class="control-label is-pl">직업군</p>
                             <ul class="jobs">
+                                <li class="custom-li-left">
+                                    <input type="radio" id="salarymen" name="joblist" value="근로소득자">
+                                    <label for="salarymen" >근로소득자</label>
+                                </li>
+                                <li class="custom-li-left">
+                                    <input type="radio" id="business" name="joblist" value="개인사업자">
+                                    <label for="business" >개인사업자</label>
+                                </li>
+                                <li class="custom-li-left">
+                                    <input type="radio" id="salarymen" name="joblist" value="근로소득자">
+                                    <label for="salarymen" >근로소득자</label>
+                                </li>
+                                <li class="custom-li-left">
+                                    <input type="radio" id="salarymen" name="joblist" value="근로소득자">
+                                    <label for="salarymen" >근로소득자</label>
+                                </li>
                                 <li class="col-sm-6" ng-click="searchDisableRemove()">
                                     <label for="salarymen" class="radio type4 salarymen">근로소득자</label>
                                     <input type="radio" id="salarymen" name="joblist" ng-model="inJob" value="근로소득자" class="ng-pristine ng-untouched ng-valid ng-not-empty">

@@ -415,7 +415,7 @@ td, th {
 	position: absolute;
 	left: 0;
 	top: -3px;
-	background: url(../../common/img/ico_insu.png) no-repeat 0 0;
+	background: (../../common/img/ico_insu.png) no-repeat 0 0;
 }
 .lnb li .iconCar::before {
 	background-image: url(../../common/img/ico_car.png)
