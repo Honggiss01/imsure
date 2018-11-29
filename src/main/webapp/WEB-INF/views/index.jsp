@@ -82,6 +82,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="resources/js/common/Router.js"></script>
+    <script src="resources/js/common/Utils.js"></script>
     <script src="resources/js/common/common.js"></script>
   </body>
 
