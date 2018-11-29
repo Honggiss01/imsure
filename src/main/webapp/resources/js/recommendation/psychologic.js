@@ -29,12 +29,12 @@ function calculateUserAnswers() {
 function addStepButtons(index) {
 	var buttonFormat = '';
 	if (index) {
-		buttonFormat += '<button type="button" class="btn btn-prev" onclick="moveStepEvent(\'prev\')">이전 단계</button>';
+		buttonFormat += '<button type="button" class="btn btn-prev" onclick="moveStepEvent(\'prev\');">이전 단계</button>';
 	}
 	if (index === (PsychologicTest.steps.length - 1)) {
-		buttonFormat += '<button type="button" class="btn btn-search onclick="Router.route(\'section\', \'/psychologicResultPage\');">내게 맞는 보험 찾기</button>';
+		buttonFormat += '<button type="button" class="btn btn-search" onclick="Router.route(\'section\',\'/psychologicResultPage\');">내게 맞는 보험 찾기</button>';
 	} else {
-		buttonFormat += '<button type="button" class="btn btn-next" onclick="moveStepEvent(\'next\')">다음 단계</button>';
+		buttonFormat += '<button type="button" class="btn btn-next" onclick="moveStepEvent(\'next\');">다음 단계</button>';
 	}
 	$('.btn-block').html(buttonFormat);
 }

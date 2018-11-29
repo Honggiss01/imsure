@@ -59,7 +59,9 @@ form .likert li label {
 	background-color: #aeaeae;
 	margin-right: 10px;
 }
-.btn-block button:hover {background-color: #30b1b2;} 
+.btn-block button:hover, .btn-block button:active {
+	background-color: #30b1b2;
+} 
 input[type="radio"] < label { 
     font-weight: 400; font-size: 14px; 
 } 
