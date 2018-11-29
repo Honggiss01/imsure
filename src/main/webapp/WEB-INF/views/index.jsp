@@ -58,7 +58,7 @@
             </a>
           </li>
           <li class="sidebar-nav-item">
-            <a class="nav-a js-scroll-trigger" href="#portfolio">
+            <a class="nav-a js-scroll-trigger" href="">
               <i class="icon-list"></i>
               <span>내 보험 관리하기</span>
             </a>
@@ -82,6 +82,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="resources/js/common/Router.js"></script>
+    <script src="resources/js/common/Utils.js"></script>
     <script src="resources/js/common/common.js"></script>
   </body>
 

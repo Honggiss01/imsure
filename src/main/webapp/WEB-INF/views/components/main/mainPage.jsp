@@ -17,7 +17,7 @@
 </header>
 
 <!-- About -->
-<section class="content-section bg-light" id="about">
+<div class="content-section bg-light" id="about">
   <div class="container text-center">
     <div class="row">
       <div class="col-lg-10 mx-auto">
@@ -31,10 +31,10 @@
       </div>
     </div>
   </div>
-</section>
+</div>
 
 <!-- Services -->
-<section class="content-section bg-primary text-white text-center"
+<div class="content-section bg-primary text-white text-center"
   id="services">
   <div class="container">
     <div class="content-section-heading">
@@ -71,7 +71,7 @@
       </div>
     </div>
   </div>
-</section>
+</div>
 
 <!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
