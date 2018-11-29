@@ -30,6 +30,17 @@ PsychologicTest.steps = [
 		'stepQuestion' : 'OPENNESS'
 	},
 ];
+//사용자 응답 저장 준비
+PsychologicTest.prepareUserAnswer = function prepareUserAnswer() {
+	
+	PsychologicTest.selectedAnswers = {};
+	var steps = PsychologicTest.steps;
+	
+	for ( var index in steps) {
+		var step = steps[index];
+		PsychologicTest.selectedAnswers[step['stepQuestion']] = [];
+	}
+}
 // 질문 형식
 PsychologicTest.questionFormat = 
 	'<label class="statement"><span class="question-number">###questionNumber###</span> ###questionText### </label>' +
@@ -144,7 +155,7 @@ PsychologicTest.addQuestionsAndSteps = function addQuestionsAndSteps() {
 			var questionJson = {
 				'questionNumber' : '0' + questionNumber,
 				'questionText' : questions[questionIndex],
-				'questionName' : questionType.toLowerCase(),
+				'questionName' : questionType.toLowerCase() + questionNumber,
 			};
 			
 			var formattedQuestion = Utils.formatElement(questionJson, questionFormat);
