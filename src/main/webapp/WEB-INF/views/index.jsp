@@ -58,7 +58,7 @@
             </a>
           </li>
           <li class="sidebar-nav-item">
-            <a class="nav-a js-scroll-trigger" href="#portfolio">
+            <a class="nav-a js-scroll-trigger" href="">
               <i class="icon-list"></i>
               <span>내 보험 관리하기</span>
             </a>

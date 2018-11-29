@@ -9,8 +9,8 @@
 <!-- header -->
 <jsp:include page="../../includes/header.jsp"/>
 
-<article class="container ng-scope" >
-    <section id="recommend" class="wrapper row">
+<div class="container ng-scope" >
+    <div id="recommend" class="wrapper row">
         <div class="col-sm-6 forms step-area" style="min-height: 589px;">
             <div class="bgChange">
                 <ul class="nav nav-tabs tabType2">
@@ -207,22 +207,20 @@
             </form>
             
         </div>
-    </section>
-</article>
+    </div>
+</div>
 
 
 <!-- JavaScript -->
 <!-- Plugins -->
 
 
-<script src="jquery-3.3.1.min.js">
-$(document).ready(function(){
-	console.log("여기 들어옴?")
+<script>
+console.log("여기 들어옴?")
 
-	$('.ng-pristine ng-untouched ng-valid ng-not-emptygender').on('click', function(){
-		var value = $(this).val;
-		console.log(value);
-	});
-
+$('.ng-pristine ng-untouched ng-valid ng-not-emptygender').on('click', function(){
+	var value = $(this).val;
+	console.log(value);
 });
+
 </script>

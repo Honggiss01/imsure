@@ -6,8 +6,8 @@
 <!-- header -->
 <jsp:include page="../../includes/header.jsp"/>
 
-<article class="container ng-scope" >
-    <section id="recommend" class="wrapper row">
+<div class="container ng-scope" >
+    <div id="recommend" class="wrapper row">
         <div class="forms step-area">
             <h1 class="likert-header">심리 검사하기</h1>
             <div class="bgChange">
@@ -367,8 +367,8 @@
                 </div>
             </div>
         </div>
-    </section>
-</article>
+    </div>
+</div>
 
 
 <!-- JavaScript -->
