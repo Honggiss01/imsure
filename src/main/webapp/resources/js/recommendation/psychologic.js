@@ -3,6 +3,8 @@
  * 
  * @author 이승은
  */
+// 첫 호출인지 확인하는 변수
+var isCalled;
 // 질문과 응답 관련 엘리먼트를 동적으로 생성
 PsychologicTest.addPossibleAnswers();
 PsychologicTest.addQuestionsAndSteps();
@@ -15,9 +17,21 @@ stepTabEvent($('.step-tab:first-child'));
 
 // 사용자 응답 저장 함수
 function saveUserAnswers() {
-	var activeStep = $('.step-tab.on');
-	var step = PsychologicTest.steps[activeStep];
+	var activeStepIndex = $('.step-tab.on').index();
+	var stepQuestion = PsychologicTest.steps[activeStepIndex]['stepQuestion'];
 	
+	var selector = 'input[name^="' + stepQuestion.toLowerCase() + '"]:checked';
+	var checkedInputs = $(selector);
+	if (checkedInputs.length === PsychologicTest.questions[stepQuestion].length) {
+		for (var i = 0; i < checkedInputs.length; i++) {
+			PsychologicTest.selectedAnswers[stepQuestion].append(checkedInputs.eq(i).val());
+		}
+		
+		return true;
+	
+	} else {
+		return false;
+	}
 }
 
 // 사용자 응답 계산 함수
@@ -56,6 +70,11 @@ function moveStepEvent(buttonType) {
 
 // 탭 클릭 이벤트 처리 함수
 function stepTabEvent(clickedTab) {
+	
+	if (isCalled && !saveUserAnswers()) {
+		return false;
+	}
+	
 	// 탭 관련 처리
 	$('.step-tab').removeClass('on').addClass('shadow');
 	$(clickedTab).removeClass('shadow').addClass('on');
@@ -65,6 +84,8 @@ function stepTabEvent(clickedTab) {
 	$('.form-area').eq(index).addClass('on');
 	// 단계 관련 버튼 표시
 	addStepButtons(index);
+	
+	isCalled = true;
 }
 
 $('.step-tab').click(function(){
