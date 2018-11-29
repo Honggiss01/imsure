@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" %>
 <link rel="stylesheet" type="text/css" href="resources/css/recommendation/recommendation.common.css">
 <link rel="stylesheet" type="text/css" href="resources/css/recommendation/recommendation.index.css">
+<link rel="stylesheet" type="text/css" href="resources/css/recommendation/recommendation.psychologic.css">
 
 <!-- header -->
 <jsp:include page="../../includes/header.jsp"/>
@@ -20,96 +21,169 @@
                 </ul>
                 <div class="form-area on">
                   <form action="">
-                    <label class="statement">1. 문항입니다.샘플입니다</label>
+                    <label class="statement"><span class="question-number">01</span> 나는 항상 타인에게 다정하게 대한다. </label>
                     <ul class='likert'>
                       <li>
-                        <input type="radio" name="likert" value="strong_agree">
-                        <label>매우 그러하다</label>
+                        <label>
+                          <input type="radio" name="extraversion1" value="2">
+                          <span></span>매우 그렇다
+                        </label>
                       </li>
                       <li>
-                        <input type="radio" name="likert" value="strong_agree">
-                        <label>그러하다</label>
+                        <label>
+                          <input type="radio" name="extraversion1" value="1">
+                          <span></span>그렇다
+                        </label>
                       </li>
                       <li>
-                        <input type="radio" name="likert" value="strong_agree">
-                        <label>Neutral</label>
+                        <label>
+                          <input type="radio" name="extraversion1" value="0">
+                          <span></span>보통
+                        </label>
                       </li>
                       <li>
-                        <input type="radio" name="likert" value="disagree">
-                        <label>Disagree</label>
+                        <label>
+                          <input type="radio" name="extraversion1" value="-1">
+                          <span></span>그렇지 않다
+                        </label>
                       </li>
                       <li>
-                        <input type="radio" name="likert" value="strong_agree">
-                        <label>Strongly disagree</label>
+                        <label>
+                          <input type="radio" name="extraversion1" value="-2">
+                          <span></span>전혀 그렇지 않다
+                        </label>
                       </li>
                     </ul>
-                    <label class="statement">It's clear that this is a responsive design.</label>
+                    <label class="statement"><span class="question-number">02</span> 나는 다른 사람들과 잘 어울린다. </label>
                     <ul class='likert'>
                       <li>
-                        <input type="radio" name="likert" value="strong_agree">
-                        <label>Strongly agree</label>
+                        <label>
+                          <input type="radio" name="extraversion2" value="2">
+                          <span></span>매우 그렇다
+                        </label>
                       </li>
                       <li>
-                        <input type="radio" name="likert" value="strong_agree">
-                        <label>Agree</label>
+                        <label>
+                          <input type="radio" name="extraversion2" value="1">
+                          <span></span>그렇다
+                        </label>
                       </li>
                       <li>
-                        <input type="radio" name="likert" value="strong_agree">
-                        <label>Neutral</label>
+                        <label>
+                          <input type="radio" name="extraversion2" value="0">
+                          <span></span>보통
+                        </label>
                       </li>
                       <li>
-                        <input type="radio" name="likert" value="disagree">
-                        <label>Disagree</label>
+                        <label>
+                          <input type="radio" name="extraversion2" value="-1">
+                          <span></span>그렇지 않다
+                        </label>
                       </li>
                       <li>
-                        <input type="radio" name="likert" value="strong_agree">
-                        <label>Strongly disagree</label>
+                        <label>
+                          <input type="radio" name="extraversion2" value="-2">
+                          <span></span>전혀 그렇지 않다
+                        </label>
                       </li>
                     </ul>
-                    <label class="statement">Codepen.io is an excellent tool for prototyping.</label>
+                    <label class="statement"><span class="question-number">03</span> 나는 항상 좋은 쪽으로 생각하기 위해 노력한다. </label>
                     <ul class='likert'>
                       <li>
-                        <input type="radio" name="likert" value="strong_agree">
-                        <label>Strongly agree</label>
+                        <label>
+                          <input type="radio" name="extraversion3" value="2">
+                          <span></span>매우 그렇다
+                        </label>
                       </li>
                       <li>
-                        <input type="radio" name="likert" value="strong_agree">
-                        <label>Agree</label>
+                        <label>
+                          <input type="radio" name="extraversion3" value="1">
+                          <span></span>그렇다
+                        </label>
                       </li>
                       <li>
-                        <input type="radio" name="likert" value="strong_agree">
-                        <label>Neutral</label>
+                        <label>
+                          <input type="radio" name="extraversion3" value="0">
+                          <span></span>보통
+                        </label>
                       </li>
                       <li>
-                        <input type="radio" name="likert" value="disagree">
-                        <label>Disagree</label>
+                        <label>
+                          <input type="radio" name="extraversion3" value="-1">
+                          <span></span>그렇지 않다
+                        </label>
                       </li>
                       <li>
-                        <input type="radio" name="likert" value="strong_agree">
-                        <label>Strongly disagree</label>
+                        <label>
+                          <input type="radio" name="extraversion3" value="-2">
+                          <span></span>전혀 그렇지 않다
+                        </label>
                       </li>
                     </ul>
-                    <label class="statement">Pete Fecteau is incredibly smart and handsome.</label>
+                    <label class="statement"><span class="question-number">04</span> 나는 항상 좋은 쪽으로 생각하기 위해 노력한다. </label>
                     <ul class='likert'>
                       <li>
-                        <input type="radio" name="likert" value="strong_agree">
-                        <label>Strongly agree</label>
+                        <label>
+                          <input type="radio" name="extraversion1" value="2">
+                          <span></span>매우 그렇다
+                        </label>
                       </li>
                       <li>
-                        <input type="radio" name="likert" value="strong_agree">
-                        <label>Agree</label>
+                        <label>
+                          <input type="radio" name="extraversion1" value="1">
+                          <span></span>그렇다
+                        </label>
                       </li>
                       <li>
-                        <input type="radio" name="likert" value="strong_agree">
-                        <label>Neutral</label>
+                        <label>
+                          <input type="radio" name="extraversion1" value="0">
+                          <span></span>보통
+                        </label>
                       </li>
                       <li>
-                        <input type="radio" name="likert" value="disagree">
-                        <label>Disagree</label>
+                        <label>
+                          <input type="radio" name="extraversion1" value="-1">
+                          <span></span>그렇지 않다
+                        </label>
                       </li>
                       <li>
-                        <input type="radio" name="likert" value="strong_agree">
-                        <label>Strongly disagree</label>
+                        <label>
+                          <input type="radio" name="extraversion1" value="-2">
+                          <span></span>전혀 그렇지 않다
+                        </label>
+                      </li>
+                    </ul>
+                    <label class="statement"><span class="question-number">03</span> 나는 항상 좋은 쪽으로 생각하기 위해 노력한다. </label>
+                    <ul class='likert'>
+                      <li>
+                        <label>
+                          <input type="radio" name="extraversion1" value="2">
+                          <span></span>매우 그렇다
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input type="radio" name="extraversion1" value="1">
+                          <span></span>그렇다
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input type="radio" name="extraversion1" value="0">
+                          <span></span>보통
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input type="radio" name="extraversion1" value="-1">
+                          <span></span>그렇지 않다
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input type="radio" name="extraversion1" value="-2">
+                          <span></span>전혀 그렇지 않다
+                        </label>
                       </li>
                     </ul>
                     <div class="buttons">
@@ -296,78 +370,7 @@
     </section>
 </article>
 
-<style>
-h1.likert-header {
-  padding-left:4.25%;
-  margin:20px 0 40px;
-}
-.forms {
-  width: 100%;
-}
-.step-tab {
-  width: 20% !important;
-}
-.bgChange {
-  padding-left: 4.25%;
-}
-form .statement {
-  display:block;
-  font-size: 16pt;
-  font-weight: bold;
-  padding: 30px 0 0 4.25%;
-  margin-bottom:30px;
-}
-form .likert {
-  list-style:none;
-  width:100%;
-  margin:0;
-  padding:0 0 35px;
-  display:block;
-  border-bottom:2px solid #efefef;
-}
-form .likert:last-of-type {border-bottom:0;}
-form .likert:before {
-  content: '';
-  position:relative;
-  top:8px;
-  left:9.5%;
-  display:block;
-  background-color:#efefef;
-  height:4px;
-  width:78%;
-}
-form .likert li {
-  display:inline-block;
-  width:19%;
-  text-align:center;
-  vertical-align: top;
-}
-form .likert li input[type=radio] {
-  display:block;
-  position:relative;
-  top:0;
-  left:50%;
-  margin-left:-6px;
-  
-}
-form .likert li label {
-  width:100%;
-  margin-top: 20px;
-}
-form .buttons {
-  margin:30px 0;
-  padding:0 4.25%;
-  text-align:right;
-  font-size: 10.5pt;
-} 
-form .buttons button {
-  padding: 5px 10px;
-  background-color: #67ab49;
-  border: 0;
-  border-radius: 3px;
-}
-form .buttons .clear {background-color: #e9e9e9;}
-form .buttons .submit {background-color: #67ab49;} 
-form .buttons .clear:hover {background-color: #ccc;}
-form .buttons .submit:hover {background-color: #14892c;} 
-</style>
+
+<!-- JavaScript -->
+<script src="resources/js/recommendation/PsychologicTest.js"></script>
+<script src="resources/js/recommendation/psychologic.js"></script>
