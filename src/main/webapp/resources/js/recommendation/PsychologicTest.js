@@ -153,7 +153,7 @@ PsychologicTest.addQuestionsAndSteps = function addQuestionsAndSteps() {
 		}
 		
 		var stepElement = Utils.formatElement({'questions' : questionElements}, PsychologicTest.stepFormat);
-		$('.bgChange').append(stepElement);
+		$(stepElement).insertBefore('.btn-block');
 	}
 	
 	$('.nav-tabs').html(stepTabs);

@@ -15,17 +15,11 @@
       <h1 class="likert-header">심리 검사하기</h1>
       <div class="bgChange">
         <ul class="nav nav-tabs tabType2">
-          <!-- 선택했을때 이벤트 처리! -->
+          <!-- 단계 탭을 동적으로 생성 -->
         </ul>
-
-        <!-- <div class="btn-block btn-input">
-                        <p class="notice errormsg" style="display: none;">
-                            <small class="ng-binding" style="color: rgb(255, 0, 0);"></small>
-                        </p>
-                        <button class="btn btn-prev">이전 단계</button>
-                        <button class="btn btn-search" ng-click="sendSugarResult()" ng-readonly="next2Checek()" ng-attr-title="{{next2buttonTitle}}" title="">내게 맞는 보험 찾기
-                        </button>
-                    </div> -->
+        <!-- 설문지 내용을 동적으로 만들어 붙여주는 부분 -->
+        <div class="btn-block btn-input">
+        </div>
       </div>
     </div>
   </div>
