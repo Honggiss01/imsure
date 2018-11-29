@@ -14,9 +14,9 @@
     <div class="forms step-area">
       <h1 class="likert-header">심리 검사 결과</h1>
       
-        <div class="container-fluid">
+        <div class="container-fluid" >
           <div class="row">
-            <div class="col-sm-6" style="">
+            <div class="col-sm-6" >
               <div class="container ">
                 <div>그래프</div>
               </div>
