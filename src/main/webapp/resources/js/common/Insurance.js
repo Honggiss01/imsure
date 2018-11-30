@@ -5,6 +5,7 @@
  */
 var Insurance = {};
 Insurance.listCardFormat = '<div class="insurance-card">' +
+							  '<input type="hidden" id="insuranceId" value="###insuranceId###">' +
 					          '<div class="img-wrapper">' +
 					            '<img alt="###imageAlt###" src="###imagePath###">' +
 					          '</div>' +
