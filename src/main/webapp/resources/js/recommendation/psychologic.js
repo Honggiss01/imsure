@@ -5,28 +5,42 @@
  */
 // 첫 호출인지 확인하는 변수
 var isCalled;
-// 질문과 응답 관련 엘리먼트를 동적으로 생성
-PsychologicTest.addPossibleAnswers();
-PsychologicTest.addQuestionsAndSteps();
+initPsychologicPage()
 
-// 사용자 응답 받을 준비
-PsychologicTest.prepareUserAnswer();
-
-// 첫 번째 탭 CSS 적용 및 내용 표시
-stepTabEvent($('.step-tab:first-child'));
-
+// 처음 페이지를 로딩했을 때 실행되는 함수
+function initPsychologicPage() {
+	
+	//첫 호출 관련 변수 값을 초기화
+	isCalled = false;
+	
+	// 질문과 응답 관련 엘리먼트를 동적으로 생성
+	PsychologicTest.addPossibleAnswers();
+	PsychologicTest.addQuestionsAndSteps();
+	
+	// 사용자 응답 받을 준비
+	PsychologicTest.prepareUserAnswer();
+	
+	// 첫 번째 탭 CSS 적용 및 내용 표시
+	stepTabEvent($('.step-tab:first-child'));
+	
+}
 // 사용자 응답 저장 함수
 function saveUserAnswers() {
+	// 현재 활성화된 폼이 어떤 심리측정치와 연관 있는지 변수에 저장
 	var activeStepIndex = $('.step-tab.on').index();
 	var stepQuestion = PsychologicTest.steps[activeStepIndex]['stepQuestion'];
 	
+	// 응답을 가져옴
 	var selector = 'input[name^="' + stepQuestion.toLowerCase() + '"]:checked';
 	var checkedInputs = $(selector);
+	// 모든 질문에 응답했을 경우 값을 저장하고 넘어감
 	if (checkedInputs.length === PsychologicTest.questions[stepQuestion].length) {
-		for (var i = 0; i < checkedInputs.length; i++) {
-			PsychologicTest.selectedAnswers[stepQuestion].append(checkedInputs.eq(i).val());
-		}
 		
+		// 배열 초기화 후 다시 값을 넣어줌
+		PsychologicTest.selectedAnswers[stepQuestion]['answers'] = [];
+		for (var i = 0; i < checkedInputs.length; i++) {
+			PsychologicTest.selectedAnswers[stepQuestion]['answers'].push(checkedInputs.eq(i).val());
+		}
 		return true;
 	
 	} else {
@@ -36,7 +50,19 @@ function saveUserAnswers() {
 
 // 사용자 응답 계산 함수
 function calculateUserAnswers() {
+	var finalAnswers = PsychologicTest.selectedAnswers;
+	for ( var index in finalAnswers) {
+		var finalAnswer = finalAnswers[index];
+		PsychologicTest.result[finalAnswer['index']] = finalAnswer['answers'].reduce((a, b) => parseInt(a) + parseInt(b), 0);
+	}
+}
+
+// 보험 추천 결과 함수
+function getPsychologicResult() {
 	
+	saveUserAnswers();
+	calculateUserAnswers();
+	//Router.route('section', 'psychologicResultPage');
 }
 
 // step에 따른 버튼 생성 함수
@@ -46,7 +72,7 @@ function addStepButtons(index) {
 		buttonFormat += '<button type="button" class="btn btn-prev" onclick="moveStepEvent(\'prev\');">이전 단계</button>';
 	}
 	if (index === (PsychologicTest.steps.length - 1)) {
-		buttonFormat += '<button type="button" class="btn btn-search" onclick="Router.route(\'section\',\'/psychologicResultPage\');">내게 맞는 보험 찾기</button>';
+		buttonFormat += '<button type="button" class="btn btn-search" onclick="getPsychologicResult();">내게 맞는 보험 찾기</button>';
 	} else {
 		buttonFormat += '<button type="button" class="btn btn-next" onclick="moveStepEvent(\'next\');">다음 단계</button>';
 	}

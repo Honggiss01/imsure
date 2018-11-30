@@ -26,7 +26,7 @@
         <div class="wrap-input100 validate-input m-b-50"
           data-validate="Enter password">
           <input class="input100" type="password" name="pass"> <span
-            class="focus-input100" data-placeholder="비밀번호 영문 대소문자, 숫자 포함  8-16자"></span>
+            class="focus-input100" data-placeholder="영문 대소문자, 숫자 포함  8-16자"></span>
         </div>
 
         <div class="container-login100-form-btn">
