@@ -18,3 +18,20 @@
 	width:48%;
 	float:right;
 }
+
+#result-part{
+	margin-top: 7%;
+}
+
+.suggest-highlight {
+    color: #ff0057;
+}
+
+.graph{
+
+	margin: 10% auto;
+}
+
+.close{
+	float:right;
+}
