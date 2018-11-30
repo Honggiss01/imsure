@@ -49,4 +49,12 @@ public class MainController {
 		return "components/recommendation/psychologicPage";
 	}
 	
+	@GetMapping("/psychologicResultPage")
+	public String psychologicResultPage() {
+		
+		log.debug("psychologicResultPage.jsp called");
+		
+		return "components/recommendation/psychologicResultPage";
+	}
+	
 }
