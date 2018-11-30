@@ -42,7 +42,8 @@
 	
 	<tx:annotation-driven/>
 	
-	<mybatis-spring:scan base-package="com.hana.imsure.mapper"/>
+	<mybatis-spring:scan base-package="com.hana.imsure.user.mapper"/>
+	
 	<context:component-scan base-package="com.hana.imsure"/>
 	
 	<!-- AOP Proxy 객체 설정 -->

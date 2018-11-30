@@ -21,7 +21,6 @@ import lombok.extern.log4j.Log4j;
 @AllArgsConstructor
 public class UserServiceImpl implements UserService{
 	
-	@Setter(onMethod_ = @Autowired)
 	private UserMapper mapper;
 	
 	//로그인
