@@ -5,6 +5,8 @@
  */
 // 객체 선언
 var PsychologicTest = {};
+// 최종 계산 결과를 저장하는 변수
+PsychologicTest.result = [];
 // 각 STEP 형식
 PsychologicTest.stepFormat = '<div class="form-area">###questions###</div>';
 // STEP
@@ -38,7 +40,10 @@ PsychologicTest.prepareUserAnswer = function prepareUserAnswer() {
 	
 	for ( var index in steps) {
 		var step = steps[index];
-		PsychologicTest.selectedAnswers[step['stepQuestion']] = [];
+		PsychologicTest.selectedAnswers[step['stepQuestion']] = {
+			'index': index,
+			'answers':[]
+		}
 	}
 }
 // 질문 형식
