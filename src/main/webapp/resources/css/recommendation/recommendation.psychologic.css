@@ -75,10 +75,6 @@ form .likert li label {
 	margin-right: 10px;
 }
 
-.btn-block button:hover, .btn-block button:focus {
-	background-color: #30b1b2;
-}
-
 input[type="radio"] < label {
 	font-weight: 400;
 	font-size: 14px;

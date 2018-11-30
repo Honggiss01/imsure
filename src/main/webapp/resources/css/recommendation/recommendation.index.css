@@ -772,3 +772,8 @@ p.control-label.is-padding{
     font-size:0.65rem;
   }
 }
+
+/*custom area*/
+.btn-block button:hover, .btn-block button:focus {
+	background-color: #ff0057;
+}
