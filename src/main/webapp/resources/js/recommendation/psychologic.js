@@ -5,6 +5,7 @@
  */
 // 첫 호출인지 확인하는 변수
 var isCalled;
+var showMessage;
 initPsychologicPage()
 
 // 처음 페이지를 로딩했을 때 실행되는 함수
@@ -12,6 +13,7 @@ function initPsychologicPage() {
 	
 	//첫 호출 관련 변수 값을 초기화
 	isCalled = false;
+	showMessage = false;
 	
 	// 질문과 응답 관련 엘리먼트를 동적으로 생성
 	PsychologicTest.addPossibleAnswers();
@@ -26,6 +28,9 @@ function initPsychologicPage() {
 }
 // 사용자 응답 저장 함수
 function saveUserAnswers() {
+	
+	var result = false;
+	
 	// 현재 활성화된 폼이 어떤 심리측정치와 연관 있는지 변수에 저장
 	var activeStepIndex = $('.step-tab.on').index();
 	var stepQuestion = PsychologicTest.steps[activeStepIndex]['stepQuestion'];
@@ -41,11 +46,16 @@ function saveUserAnswers() {
 		for (var i = 0; i < checkedInputs.length; i++) {
 			PsychologicTest.selectedAnswers[stepQuestion]['answers'].push(checkedInputs.eq(i).val());
 		}
-		return true;
+		
+		showMessage = false;
+		result = true;
 	
 	} else {
-		return false;
+		showMessage = true;
 	}
+	
+	showPsychologicValidationMessage();
+	return result;
 }
 
 // 사용자 응답 계산 함수
@@ -117,3 +127,15 @@ function stepTabEvent(clickedTab) {
 $('.step-tab').click(function(){
 	stepTabEvent(this);
 });
+
+// 유효성 검사 메시지 표시 함수
+function showPsychologicValidationMessage() {
+	// 메시지 초기화
+	$('.message-top').css('display','none');
+	$('.message-bottom').css('display', 'none');
+	
+	if (showMessage) {
+		$('.message-bottom').css('display', 'block');
+		$('.message-top').css('display','block');
+	}
+}
