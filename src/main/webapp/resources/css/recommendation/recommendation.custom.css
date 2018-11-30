@@ -28,10 +28,10 @@
 }
 
 .graph{
-
 	margin: 10% auto;
 }
-
-.close{
-	float:right;
+.modal-title{
+	padding: 1rem;
+    margin: -1rem -1rem -1rem auto;
 }
+

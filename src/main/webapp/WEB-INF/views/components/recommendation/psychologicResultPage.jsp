@@ -42,29 +42,22 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">×</button>
-          <h4><span class="glyphicon glyphicon-lock"></span> 상품상세보기</h4>
+          <span class="modal-title">상품상세보기</span>
+          <button type="button" class="close" data-dismiss="modal"  style="width:5%;margin-right:0.5%">×</button>
         </div>
         <div class="modal-body">
-          <form role="form">
-            <div class="form-group">
-              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label>
-              <input type="number" class="form-control" id="psw" placeholder="How many?">
-            </div>
-            <div class="form-group">
-              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
-              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
-            </div>
-              <button type="submit" class="btn btn-block">Pay 
-                <span class="glyphicon glyphicon-ok"></span>
-              </button>
-          </form>
+          <div>
+            <img src="resources/img/recommendation/hana_logo_small.png" width="13%" height="13%">
+            <span>(무)행복knowhowTop3 건강보험(보장성)</span>
+            <button type="button" class="btn" style="width:2%">다운로드</button>          
+          </div>
+        
+          
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">
             <span class="glyphicon glyphicon-remove"></span> Cancel
           </button>
-          <p>Need <a href="#">help?</a></p>
         </div>
       </div>
     </div>
