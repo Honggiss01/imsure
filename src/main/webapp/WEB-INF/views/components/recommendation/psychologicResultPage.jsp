@@ -53,19 +53,19 @@
 
         <div class="containner" id="modal-bottom">
           <div class='insurance-group'>
-            <label>보험종류</label><span>질병보장보험</span>
+            <label>보험종류</label><div>질병보장보험</div>
           </div>
           <div class='insurance-group'>
-            <label>보험종류</label><span>질병보장보험</span>
+            <label>가입나이</label><div>0~12세</div>
           </div>
           <div class='insurance-group'>
-            <label>보험종류</label><span>질병보장보험</span>
+            <label>보장내용</label><div>고액암, 일반암, 교통장해, 일반장해, 입원비, 수술비 등등등등등등등등등등등ㄹ등</div>
           </div>
           <div class='insurance-group'>
-            <label>보험종류</label><span>질병보장보험</span>
+            <label>보험종류</label><div>질병보장보험</div>
           </div>
           <div class='insurance-group'>
-            <label>보험종류</label><span>질병보장보험</span>
+            <label>보험종류</label><div>질병보장보험</div>
           </div>
         </div>
 

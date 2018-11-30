@@ -47,7 +47,7 @@
 	margin:5% 0px;
 	display:inline-block;
 	text-align: center;
-	
+	font-weight: bold;
 }
 
 
@@ -59,16 +59,21 @@
 	width:20%;
 	margin-left:3%;
 	background-color: #30b1b2;
+	border-radius: 0.2rem;
 	color: white;
 	padding:0.1rem 0.5rem;
 	text-align: center;
+	box-shadow: 5px 6px #B8C6C7;
 }
 
-.insurance-group span{
+.insurance-group div{
 	width:70%;
 	display:inline-block;
-	margin: 0.1rem 3%;
+	margin: 0px 3%;
 	text-align: center;
+	border-radius: 0.2rem;
+
+	 box-shadow: 3px 3px 5px lightgray;
 }
 
 
