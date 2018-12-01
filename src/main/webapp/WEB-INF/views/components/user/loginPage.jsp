@@ -18,13 +18,13 @@
         <span class="login100-form-title p-b-70"> 로그인 </span>
         
         <div class="wrap-input100 validate-input m-t-85 m-b-35"
-          data-validate="이메일을 입력해주세요">
+          data-validate="이메일을 정확히 입력해주세요">
           <input class="input100" type="text" name="email"> <span
             class="focus-input100" data-placeholder="test@email.com"></span>
         </div>
 
         <div class="wrap-input100 validate-input m-b-50"
-          data-validate="비밀번호를 입력해주세요">
+          data-validate="비밀번호를 정확히 입력해주세요">
           <input class="input100" type="password" name="pass"> <span
             class="focus-input100" data-placeholder="영문 대소문자, 숫자 포함  8-16자"></span>
         </div>

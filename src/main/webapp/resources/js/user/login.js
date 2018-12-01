@@ -47,7 +47,7 @@
             }
         }
         else {
-            if($(input).val().trim() == ''){
+            if($(input).val().trim().match(/^[A-Za-z0-9]{8,16}$/) == null){
                 return false;
             }
         }
