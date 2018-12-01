@@ -119,12 +119,16 @@
  -->
 <script src="resources/js/common/Chart.js"></script>
 <script>
+this.result
+
+	console.log(PsychologicTest.result);
+	
 	var ctx = document.getElementById("myChart");
 	var data = {
 		labels : [ '외향성', '친화성', '성실성', '신경성', '개방성' ],
 		datasets : [ {
 			label : '성격지표',
-			data : [ -3, -6, 8, 6, 2 ],
+			data : PsychologicTest.result,
 			fill : true,
 			backgroundColor : 'rgba(255, 0, 87, 0.2)',
 			borderColor : '#ff0057',
