@@ -69,6 +69,11 @@
               <span>(임시) 심리지표 결과페이지</span>
             </a>
           </li>
+          <li class="sidebar-nav-item">
+            <a class="nav-a js-scroll-trigger" href="demographicResultPage">
+              <span>(임시) 심리지표 결과페이지</span>
+            </a>
+          </li>
         </ul>
       </nav>
     </nav>
