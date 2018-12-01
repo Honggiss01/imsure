@@ -1,6 +1,40 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper 
-	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-	"http://mybatis.org.dtd.mybatis-3-mapper.dtd">
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hana.imsure.user.mapper.UserMapper">
+	<!-- 회원가입 -->
+	<insert id="create">
+		INSERT INTO imsure_users 
+            ("user_id", 
+             "email", 
+             "password") 
+		VALUES		((SELECT user_id_function 
+              	  	  FROM   dual), 
+             	 	 #{email}, 
+             	 	 #{password})
+	</insert>
+	
+	<!-- 회원 권한 초기 설정 -->
+	<insert id="createRole">
+		INSERT INTO imsure_users_roles 
+		VALUES      ('role_uncertified_member', 
+             		 #{userId})
+	</insert>
+	
+	<!-- 회원 권한 변경 -->
+	<update id="updateRole">
+		UPDATE imsure_users_roles 
+		SET    "authority" = 'role_user' 
+		WHERE  "user_id" = #{userId}
+	</update>
+	
+	<!-- 로그인 -->
+	<select id="certify" resultType="com.hana.imsure.user.domain.User">
+		SELECT * 
+		FROM   imsure_users 
+		WHERE  "email" = #{email} 
+       		AND "password" = #{password}
+	</select>
+	
 </mapper>

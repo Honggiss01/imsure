@@ -1,10 +1,10 @@
 package com.hana.imsure.user.service;
 
-import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import com.hana.imsure.user.domain.User;
 import com.hana.imsure.user.mapper.UserMapper;
 
 import lombok.AllArgsConstructor;
@@ -21,13 +21,28 @@ import lombok.extern.log4j.Log4j;
 @AllArgsConstructor
 public class UserServiceImpl implements UserService{
 	
+	@Setter(onMethod_ = @Autowired)
 	private UserMapper mapper;
 	
+	//회원가입
+	@Transactional
+	@Override
+	public void register(String email, String password) {
+		log.info("register..." + email);
+		mapper.create(email, password);
+	}
+
+	//회원 권한 변경
+	@Override
+	public void updateRole(String userId) {
+		log.info("updateRole..." + userId);
+		mapper.updateRole(userId);
+	}
+
 	//로그인
 	@Override
-	public Map<String, String> login(String email, String password) {
-		log.debug(email + "로그인 시도 중...");
+	public User login(String email, String password) {
+		log.info("login..." + email);
 		return mapper.certify(email, password);
 	}
-	
 }

@@ -13,7 +13,6 @@ public class User {
 	private String email;
 	private String password;
 	private String regdate;
-	private String authority;
 	
 	/**
 	 * 이메일과 비밀번호 null값을 체크하는 메소드.

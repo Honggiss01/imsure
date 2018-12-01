@@ -1,6 +1,6 @@
 package com.hana.imsure.user.service;
 
-import java.util.Map;
+import com.hana.imsure.user.domain.User;
 
 /**
  * User와 관련된 비즈니스 로직 수행을 위한 인터페이스
@@ -8,6 +8,10 @@ import java.util.Map;
  * @author 김홍기
  */
 public interface UserService {
+	//회원가입
+	public void register(String email, String password);
+	//회원 권한 변경
+	public void updateRole(String userId);
 	//로그인
-	public Map<String, String> login(String email, String password);
+	public User login(String email, String password);
 }
