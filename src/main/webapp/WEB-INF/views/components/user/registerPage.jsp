@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" href="resources/vendor/daterangepicker/daterangepicker.css">
 <link rel="stylesheet" type="text/css" href="resources/css/user/user.util.css">
 <link rel="stylesheet" type="text/css" href="resources/css/user/user.main.css">
+<link rel="stylesheet" type="text/css" href="resources/css/user/user.register.css">
 
 <!-- header -->
 <jsp:include page="../../includes/header.jsp"/>
@@ -25,14 +26,15 @@
 
         <div class="wrap-input100 validate-input m-b-50"
           data-validate="올바른 비밀번호를 입력해주세요">
-          <input class="input100" type="password" name="pass"> <span
-            class="focus-input100" data-placeholder="비밀번호"></span>
+          <input class="input100 include-mobile-password-show-button" type="password" name="password"> 
+          <span class="focus-input100" data-placeholder="비밀번호"></span>
+          <span class="icon-eye mobile-password-show-button"></span>  
         </div>
         
-        <div class="wrap-input100 validate-input m-b-50"
+        <div class="wrap-input100 validate-input m-b-50 passwordConfirm-wrapper"
           data-validate="위에서 입력하신 비밀번호와 동일한 비밀번호를 입력해주세요">
-          <input class="input100" type="password" name="pass"> <span
-            class="focus-input100" data-placeholder="비밀번호 확인"></span>
+          <input class="input100" type="password" name="passwordConfirm"> 
+          <span class="focus-input100" data-placeholder="비밀번호 확인"></span>
         </div>
 
         <div class="container-login100-form-btn">
@@ -42,14 +44,13 @@
         <ul class="login-more p-t-190">
           <li class="m-b-8">
             <span class="txt1">이미 회원이시라면, </span> 
-            <a href="#" class="txt2"> 로그인 </a>
+            <a href="all/login" class="txt2" id="a-nav-login"> 로그인 </a>
           </li>
         </ul>
       </form>
     </div>
   </div>
 </div>
-
 
 <div id="dropDownSelect1"></div>
 
@@ -61,4 +62,5 @@
 <script src="resources/vendor/daterangepicker/moment.min.js"></script>
 <script src="resources/vendor/daterangepicker/daterangepicker.js"></script>
 <script src="resources/vendor/countdowntime/countdowntime.js"></script>
+<script src="resources/js/user/register.js"></script>
 <script src="resources/js/user/login.js"></script>
