@@ -17,12 +17,20 @@ public class UserController {
 	
 	private UserService service;
 	
-	@GetMapping("/loginPage")
+	@GetMapping("/all/loginPage")
 	public String loginPage() {
 		
 		log.debug("loginPage.jsp called...");
 		
 		return "components/user/loginPage";
+	}
+	
+	@GetMapping("/all/registerPage")
+	public String regiterPage() {
+		
+		log.debug("registerPage.jsp called...");
+		
+		return "components/user/registerPage";
 	}
 	
 	@PostMapping("/register")

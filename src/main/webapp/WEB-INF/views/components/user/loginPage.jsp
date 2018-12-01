@@ -5,8 +5,8 @@
 <link rel="stylesheet" type="text/css" href="resources/vendor/animsition/css/animsition.min.css">
 <link rel="stylesheet" type="text/css" href="resources/vendor/select2/select2.min.css">
 <link rel="stylesheet" type="text/css" href="resources/vendor/daterangepicker/daterangepicker.css">
-<link rel="stylesheet" type="text/css" href="resources/css/user/login.util.css">
-<link rel="stylesheet" type="text/css" href="resources/css/user/login.main.css">
+<link rel="stylesheet" type="text/css" href="resources/css/user/user.util.css">
+<link rel="stylesheet" type="text/css" href="resources/css/user/user.main.css">
 
 <!-- header -->
 <jsp:include page="../../includes/header.jsp"/>
@@ -18,13 +18,13 @@
         <span class="login100-form-title p-b-70"> 로그인 </span>
         
         <div class="wrap-input100 validate-input m-t-85 m-b-35"
-          data-validate="이메일을 정확히 입력해주세요">
+          data-validate="올바른 이메일을 입력해주세요">
           <input class="input100" type="text" name="email"> <span
             class="focus-input100" data-placeholder="test@email.com"></span>
         </div>
 
         <div class="wrap-input100 validate-input m-b-50"
-          data-validate="비밀번호를 정확히 입력해주세요">
+          data-validate="올바른 비밀번호를 입력해주세요">
           <input class="input100" type="password" name="pass"> <span
             class="focus-input100" data-placeholder="영문 대소문자, 숫자 포함  8-16자"></span>
         </div>
@@ -41,7 +41,7 @@
 
           <li>
             <span class="txt1"> 아직 </span>
-            <a href="#" class="txt2"> 회원 </a>
+            <a href="all/registerPage" class="txt2" id="a-nav-register"> 회원 </a>
             <span class="txt1"> 이 아니신가요? </span>
           </li>
         </ul>

@@ -1,4 +1,4 @@
-var currentPage = 'mainPage';
+var currentPage = 'all/mainPage';
 (function($) {
   "use strict"; // Start of use strict
 

@@ -10,6 +10,12 @@ import lombok.extern.log4j.Log4j;
 public class MainController {
 	
 	@GetMapping("/")
+	public String root() {
+		
+		return "forward:/all";
+	}
+	
+	@GetMapping("/all")
 	public String home() {
 		
 		log.debug("index.jsp called");
@@ -17,7 +23,7 @@ public class MainController {
 		return "index";
 	}
 	
-	@GetMapping("/mainPage")
+	@GetMapping("/all/mainPage")
 	public String mainPage() {
 		
 		log.debug("mainPage.jsp called");
