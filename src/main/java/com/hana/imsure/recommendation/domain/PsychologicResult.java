@@ -2,8 +2,13 @@ package com.hana.imsure.recommendation.domain;
 
 import lombok.Data;
 
+/**
+ * 심리학적 보험 추천 결과 정보를 관리를 위한 도메인 객체
+ * 
+ * @author 김홍기
+ */
 @Data
-public class psychologicResult {
+public class PsychologicResult {
 	private String psychologicResultId;
 	private String userId;
 	private String extraversion;      //외향성
