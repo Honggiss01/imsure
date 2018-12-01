@@ -33,6 +33,14 @@ public class UserController {
 		return "components/user/registerPage";
 	}
 	
+	@GetMapping("/all/resetPasswordPage")
+	public String resetPasswordPage() {
+		
+		log.debug("resetPasswordPage.jsp called...");
+		
+		return "components/user/resetPasswordPage";
+	}
+	
 	@PostMapping("/register")
 	public String register(String email, String password, Model model) {
 		service.login(email, password);

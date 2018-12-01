@@ -40,7 +40,7 @@
         });
     });
 
-    $('#a-nav-register').click(function(event){
+    $('.login-more .a-nav').click(function(event){
     	Router.routeWithATag(this, event, 'section');
     });
     

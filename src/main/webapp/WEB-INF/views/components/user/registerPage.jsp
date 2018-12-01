@@ -44,7 +44,7 @@
         <ul class="login-more p-t-190">
           <li class="m-b-8">
             <span class="txt1">이미 회원이시라면, </span> 
-            <a href="all/login" class="txt2" id="a-nav-login"> 로그인 </a>
+            <a href="all/loginPage" class="txt2" id="a-nav-login"> 로그인 </a>
           </li>
         </ul>
       </form>

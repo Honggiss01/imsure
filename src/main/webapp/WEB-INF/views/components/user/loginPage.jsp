@@ -35,13 +35,13 @@
 
         <ul class="login-more p-t-190">
           <li class="m-b-8">
-            <a href="#" class="txt2"> 비밀번호 </a>
+            <a href="all/resetPasswordPage" class="txt2 a-nav"> 비밀번호 </a>
             <span class="txt1"> 가 생각나지 않으신가요? </span> 
           </li>
 
           <li>
             <span class="txt1"> 아직 </span>
-            <a href="all/registerPage" class="txt2" id="a-nav-register"> 회원 </a>
+            <a href="all/registerPage" class="txt2 a-nav"> 회원 </a>
             <span class="txt1"> 이 아니신가요? </span>
           </li>
         </ul>
