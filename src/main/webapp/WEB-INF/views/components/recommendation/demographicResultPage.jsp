@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="resources/css/recommendation/recommendation.psychologic.css">
 <link rel="stylesheet" type="text/css" href="resources/css/recommendation/recommendation.psychologic-result.css">
 
-
+ 
 <!-- header -->
 <jsp:include page="../../includes/header.jsp"/>
 
