@@ -3,4 +3,29 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hana.imsure.recommendation.mapper.PsychologicResultMapper">
+	<!-- 심리학적 보험 추천 결과 저장하기 -->
+	<insert id="create">
+		INSERT INTO imsure_psychologic_results 
+            		(psychologic_results_id, 
+             		user_id, 
+             		extraversion, 
+             		agreeableness, 
+             		conscientiousness, 
+             		neuroticism, 
+             		openness) 
+		VALUES      ((SELECT psychologic_id_function 
+              		FROM dual), 
+             		#{userId}, 
+             		#{extraversion}, 
+             		#{agreeableness}, 
+             		#{conscientiousness}, 
+             		#{neuroticism}, 
+             		#{openness})
+	</insert>
+	<!-- 심리학적 보험 추천 결과 상세보기 -->
+	<select id="read">
+		SELECT * 
+		FROM   imsure_insurances 
+		WHERE  insurance_id = #{insuranceId};
+	</select>
 </mapper>
