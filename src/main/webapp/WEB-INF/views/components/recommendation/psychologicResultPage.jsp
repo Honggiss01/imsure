@@ -213,6 +213,7 @@
 				$(".recommendation-list-card").append(Utils.formatElement(data2, Insurance.listCardFormat));
 				$(".recommendation-list-card").append(Utils.formatElement(data3, Insurance.listCardFormat));
 				$(".recommendation-list-card").append(Utils.formatElement(data4, Insurance.listCardFormat));
+
 		},
 		error : function(jqXHR, textStatus, errorThrown) {
 			alert(jqXHR.responseText);
