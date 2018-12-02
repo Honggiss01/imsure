@@ -9,9 +9,9 @@ import com.hana.imsure.user.domain.User;
  */
 public interface UserService {
 	//회원가입
-	public void register(String email, String password);
+	public boolean register(String email, String password);
 	//회원 권한 변경
-	public void updateRole(String userId);
+	public boolean updateRole(String userId);
 	//로그인
 	public User login(String email, String password);
 }

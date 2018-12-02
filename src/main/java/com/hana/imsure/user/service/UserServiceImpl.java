@@ -27,16 +27,26 @@ public class UserServiceImpl implements UserService{
 	//회원가입
 	@Transactional
 	@Override
-	public void register(String email, String password) {
+	public boolean register(String email, String password) {
 		log.info("register..." + email);
-		mapper.create(email, password);
+		
+		if (mapper.create(email, password) == 1) {
+			String userId = mapper.readRole(email);
+			if (mapper.createRole(userId) == 1) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	//회원 권한 변경
 	@Override
-	public void updateRole(String userId) {
+	public boolean updateRole(String userId) {
 		log.info("updateRole..." + userId);
-		mapper.updateRole(userId);
+		if (mapper.updateRole(userId) == 1) {
+			return true;
+		}
+		return false;
 	}
 
 	//로그인
