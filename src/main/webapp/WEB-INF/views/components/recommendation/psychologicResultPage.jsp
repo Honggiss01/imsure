@@ -179,11 +179,11 @@ this.result
 		},
 		dataType: "json",
 		success: function(data) {
-			console.log(data.result);
+			console.log(data.resultList);
 			
 			// 결과 카드 뿌려주기(물어보기)
-			var target = $(".recommendation-list").val;
-			target.appane(Insurance.listCardFormat(data));
+			//var target = $(".recommendation-list").val;
+			//target.appane(Insurance.listCardFormat(data.resultList));
 		},
 		error: function(data) {
 			alert('알수없는 오류가 발생했습니다.')

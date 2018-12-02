@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -63,7 +64,7 @@ public class MainController {
 		return "components/recommendation/psychologicResultPage";
 	}
 	@PostMapping("/user/recommend-based-on-psychological-features")
-	public List<Map<String, String>> psychologicFeatures(String email, String score) {
+	public void psychologicFeatures(String email, String score, Model model) {
 	
 		System.out.println("받은 이메일 : " + email + ", 받은 점수 : "+score);
 		Map<String, String> map = new HashMap<>();
@@ -86,7 +87,7 @@ public class MainController {
 		
 		System.out.println(result.toString());
 		
-		return result;
+		model.addAttribute("resultList", result);
 	}
 	
 }

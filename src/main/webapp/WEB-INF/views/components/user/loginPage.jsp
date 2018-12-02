@@ -62,3 +62,7 @@
 <script src="resources/vendor/daterangepicker/daterangepicker.js"></script>
 <script src="resources/vendor/countdowntime/countdowntime.js"></script>
 <script src="resources/js/user/login.js"></script>
+<script>
+
+var email = $(".email")
+</script>
