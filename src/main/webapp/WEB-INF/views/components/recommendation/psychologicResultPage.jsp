@@ -33,14 +33,13 @@
               ?</button>
           </div>
           <!-- 추천 결과가 표시되는 영역 start -->
-          <div class="recommendation-list">            
-            <div class="insurance-card" data-toggle="modal" data-target="#insuranceDetailModal">
-              <div class="recommendation-list-card">
-              
-              </div>
+          <div class="recommendation-list">
+            <div class="insurance-card" data-toggle="modal"
+              data-target="#insuranceDetailModal">
+              <div class="recommendation-list-card"></div>
             </div>
           </div>
-          
+
           <!-- 추천 결과가 표시되는 영역 end -->
         </div>
       </div>
@@ -133,7 +132,7 @@
 		labels : [ '외향성', '친화성', '성실성', '신경성', '개방성' ],
 		datasets : [ {
 			label : '성격지표',
-			data : [-5, 5, 6, 7, 10],
+			data : [ -5, 5, 6, 7, 10 ],
 			fill : true,
 			backgroundColor : 'rgba(255, 0, 87, 0.2)',
 			borderColor : '#ff0057',
@@ -173,55 +172,34 @@
 		data : data,
 		options : options
 	});
-	
 
-	$.ajax({
-		type :"post",
-		url : "/user/recommend-based-on-psychological-features",
-		data : {
-			email : "bangry123@naver.com"
-		},
-		contentType:"application/json; charset=UTF-8",
-		success : function(data, status, xhr) {
-				
-				console.log(data)
-				for ( var result in data) {
-					console.log(data[result].insuranceId);
-				}
-				
-				var data2 = {
-					"insuranceId" : "26",
-					"imageAlt" : "하나생명",
-					"imagePath" : "resources/img/recommendation/hana_logo_small.png",
-					"insuranceName" : "(무)행복knowhow연금보험 1형(기본형)",
-					"insuranceType" : "연금보험"
-				}
-				
-				var data3 = {
-						"insuranceId" : "26",
-						"imageAlt" : "하나생명",
-						"imagePath" : "resources/img/recommendation/hana_logo_small.png",
-						"insuranceName" : "(무)행복knowhow연금보험 1형(기본형)",
-						"insuranceType" : "연금보험"
+	$
+			.ajax({
+				type : "post",
+				url : "/user/recommend-based-on-psychological-features",
+				data : {
+					email : "bangry123@naver.com"
+				},
+				contentType : "application/json; charset=UTF-8",
+				success : function(data, status, xhr) {
+
+					console.log(data)
+					for ( var result in data) {
+						console.log(data[result].insuranceId);
+						var sendData = {
+							"insuranceId" : data[result].insuranceId,
+							"imageAlt" : "하나생명",
+							"imagePath" : "resources/img/recommendation/hana_logo_small.png",
+							"insuranceName" : data[result].insuranceName,
+							"insuranceType" : data[result].insuranceType
+						}
+						
+						$(".recommendation-list-card").append(Utils.formatElement(sendData,Insurance.listCardFormat));
 					}
-				
-				var data4 = {
-						"insuranceId" : "26",
-						"imageAlt" : "하나생명",
-						"imagePath" : "resources/img/recommendation/hana_logo_small.png",
-						"insuranceName" : "(무)행복knowhow연금보험 1형(기본형)",
-						"insuranceType" : "연금보험"
-					}
-				console.log(Utils.formatElement(data2, Insurance.listCardFormat));
-				$(".recommendation-list-card").append(Utils.formatElement(data2, Insurance.listCardFormat));
-				$(".recommendation-list-card").append(Utils.formatElement(data3, Insurance.listCardFormat));
-				$(".recommendation-list-card").append(Utils.formatElement(data4, Insurance.listCardFormat));
 
-		},
-		error : function(jqXHR, textStatus, errorThrown) {
-			alert(jqXHR.responseText);
-		}
-	});
-
-
+				},
+				error : function(jqXHR, textStatus, errorThrown) {
+					alert(jqXHR.responseText);
+				}
+			});
 </script>
