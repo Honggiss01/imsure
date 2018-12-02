@@ -10,10 +10,11 @@
 
 <div class="container ng-scope">
   <div id="recommend" class="wrapper row">
+    <h2>미혼 여성이며 26세의 근로소득자인 OOO님의 결과 입니다.</h2>
     <div class="col-sm-12" id="result-part">
       <div class="row">
         <div class="col-sm-6">
-          <h4 class="recommendation-title">심리검사 결과</h4>
+          <h4 class="recommendation-title">OOO님과 비슷한 사람들이 가입한 보험종류는?</h4>
           <div class="graph">
             <canvas id="myChart" class="chartjs" width="600"
               height="400"></canvas>
@@ -53,7 +54,47 @@
     </div>
   </div>
 </div>
+<!-- 보험 상세 모달 -->
+<div class="modal fade" id="insuranceDetailModal" role="dialog">
+  <div class="modal-dialog">
 
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-title">보험상품 상세보기</span>
+        <button type="button" class="close" data-dismiss="modal"
+          style="width: 5%; margin-right: 0.5%">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="containner" id="modal-top">
+          <img src="resources/img/recommendation/hana_logo_small.png" width="20%" height="20%"> 
+          <span>(무)행복knowhowTop3건강보험(보장성)</span>
+        </div>
+
+        <div class="containner" id="modal-bottom">
+          <div class='insurance-group'>
+            <label>보험종류</label><div>질병보장보험</div>
+          </div>
+          <div class='insurance-group'>
+            <label>가입나이</label><div>0~12세</div>
+          </div>
+          <div class='insurance-group'>
+            <label>보장내용</label><div>고액암, 일반암, 교통장해, 일반장해, 입원비, 수술비 등등등등등등등등등등등ㄹ등</div>
+          </div>
+          <div class='insurance-group'>
+            <label>보험종류</label><div>질병보장보험</div>
+          </div>
+          <div class='insurance-group'>
+            <label>보험종류</label><div>질병보장보험</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn" data-dismiss="modal">닫기 </button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- JavaScript -->
 <!-- Plugins -->
