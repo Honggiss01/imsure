@@ -10,4 +10,6 @@ import com.hana.imsure.recommendation.domain.PsychologicResult;
 public interface PsychologicResultMapper {
 	//심리학적 보험 추천 결과 저장하기
 	public void create(PsychologicResult psychologicResult);
+	//심리학적 보험 추천 결과 상세보기
+	public void read(String insuranceId);
 }
