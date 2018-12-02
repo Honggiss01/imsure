@@ -123,6 +123,8 @@ this.result
 
 	console.log(PsychologicTest.result);
 	
+	
+	
 	var ctx = document.getElementById("myChart");
 	var data = {
 		labels : [ '외향성', '친화성', '성실성', '신경성', '개방성' ],
@@ -167,5 +169,24 @@ this.result
 		type : 'radar',
 		data : data,
 		options : options
+	});
+	
+	$.ajax("/user/recommend-based-on-psychological-features", {
+		method: "post",
+		data: {
+			"email": "bangry123@naver.com",
+			"score":  PsychologicTest.result
+		},
+		dataType: "json",
+		success: function(data) {
+			console.log(data.result);
+			
+			// 결과 카드 뿌려주기(물어보기)
+			var target = $(".recommendation-list").val;
+			target.appane(Insurance.listCardFormat(data));
+		},
+		error: function(data) {
+			alert('알수없는 오류가 발생했습니다.')
+		}
 	});
 </script>
