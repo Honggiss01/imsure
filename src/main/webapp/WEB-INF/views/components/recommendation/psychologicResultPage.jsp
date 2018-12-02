@@ -121,6 +121,8 @@
 <script src="resources/js/common/Insurance.js"></script>
 <script>
 
+	var csrfHeaderName = "${_csfr.headerName}";
+	var csrfTokenValue = "${_csfr.token}";
 	console.log(PsychologicTest.result);
 
 	var ctx = document.getElementById("myChart");
@@ -171,6 +173,9 @@
 	$.ajax({
 		type : "post",
 		url : "/user/recommend-based-on-psychological-features",
+		beforeSend : function(xhr){
+			xhr.setRequestHeader(csrfHeaderName, csrfTokenValue);
+		},
 		data : {
 			userId : "1",
 			score : PsychologicTest.result
