@@ -29,8 +29,7 @@
               <span class="recommendation-highlight">추천</span> 생명보험은?
             </h4>
             <button type="button" class="btn" data-toggle="modal"
-              data-target="#algorithmDescriptionModal">Why SURE
-              ?</button>
+              data-target="#algorithmDescriptionModal">Why SURE?</button>
           </div>
           <!-- 추천 결과가 표시되는 영역 start -->
           <div class="recommendation-list">
@@ -39,7 +38,6 @@
               <div class="recommendation-list-card"></div>
             </div>
           </div>
-
           <!-- 추천 결과가 표시되는 영역 end -->
         </div>
       </div>
@@ -117,15 +115,13 @@
 </div>
 
 <!-- JavaScript -->
-<!-- <script src="resources/js/recommendation/PsychologicTest.js"></script>
+<script src="resources/js/recommendation/PsychologicTest.js"></script>
 <script src="resources/js/recommendation/psychologic.js"></script>
- -->
 <script src="resources/js/common/Chart.js"></script>
 <script src="resources/js/common/Insurance.js"></script>
 <script>
-	this.result
 
-	//console.log(PsychologicTest.result);
+	console.log(PsychologicTest.result);
 
 	var ctx = document.getElementById("myChart");
 	var data = {
@@ -144,7 +140,6 @@
 	}
 	var options = {
 		scale : {
-
 			angleLines : {
 				display : false
 			},
@@ -173,33 +168,31 @@
 		options : options
 	});
 
-	$
-			.ajax({
-				type : "post",
-				url : "/user/recommend-based-on-psychological-features",
-				data : {
-					email : "bangry123@naver.com"
-				},
-				contentType : "application/json; charset=UTF-8",
-				success : function(data, status, xhr) {
+	$.ajax({
+		type : "post",
+		url : "/user/recommend-based-on-psychological-features",
+		data : {
+			userId : "1",
+			score : PsychologicTest.result
+		},
+		contentType : "application/json; charset=UTF-8",
+		success : function(data, status, xhr) {
 
-					console.log(data)
-					for ( var result in data) {
-						console.log(data[result].insuranceId);
-						var sendData = {
-							"insuranceId" : data[result].insuranceId,
-							"imageAlt" : "하나생명",
-							"imagePath" : "resources/img/recommendation/hana_logo_small.png",
-							"insuranceName" : data[result].insuranceName,
-							"insuranceType" : data[result].insuranceType
-						}
-						
-						$(".recommendation-list-card").append(Utils.formatElement(sendData,Insurance.listCardFormat));
-					}
-
-				},
-				error : function(jqXHR, textStatus, errorThrown) {
-					alert(jqXHR.responseText);
-				}
-			});
+			console.log(data)
+			for ( var result in data) {
+				console.log(data[result].insuranceId);
+				var sendData = {
+					"insuranceId" : data[result].insuranceId,
+					"imageAlt" : "하나생명",
+					"imagePath" : "resources/img/recommendation/hana_logo_small.png",
+					"insuranceName" : data[result].insuranceName,
+					"insuranceType" : data[result].insuranceType
+				}	
+				$(".recommendation-list-card").append(Utils.formatElement(sendData,Insurance.listCardFormat));
+			}
+		},
+		error : function(jqXHR, textStatus, errorThrown) {
+			alert(jqXHR.responseText);
+		}
+	});
 </script>
