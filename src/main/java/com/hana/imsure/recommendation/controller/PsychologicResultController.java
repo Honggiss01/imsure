@@ -46,14 +46,13 @@ public class PsychologicResultController {
 		return "components/recommendation/psychologicResultPage";
 	}
 	
-	//심리학적 보험 추천 결과 저장하기
 	@PostMapping(value= "/user/recommend-based-on-psychological-features",
 			consumes = "application/json; charset=UTF-8",
-			produces = { MediaType.APPLICATION_JSON_UTF8_VALUE })
-	public ResponseEntity<String> psychologicFeatures(@RequestBody String email) {
-	
-		log.debug("받은 이메일 : " + email );
+			produces = { MediaType.APPLICATION_JSON_UTF8_VALUE})
+	public ResponseEntity<List<Map<String, String>>> psychologicFeatures(@RequestBody String email) {
 		
+		System.out.println("여기는 오나?");
+		System.out.println("받은 이메일 : " + email );
 		Map<String, String> map = new HashMap<>();
 		List<Map<String, String>> result = new ArrayList<>();
 		map.put("insuranceId", "26");
@@ -71,11 +70,11 @@ public class PsychologicResultController {
 		map.put("insuranceType", "연금보험");
 		result.add(map);
 
-		String jsonStr = new Gson().toJson(result);
+		//String jsonStr = new Gson().toJson(result);
 		
-		System.out.println(jsonStr);
+		//System.out.println(jsonStr);
 		System.out.println(result.toString());
 		
-		return new ResponseEntity<>(jsonStr, HttpStatus.OK);
+		return new ResponseEntity<>(result, HttpStatus.OK);
 	}
 }
