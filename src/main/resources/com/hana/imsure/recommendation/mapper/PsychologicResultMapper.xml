@@ -12,15 +12,21 @@
              		agreeableness, 
              		conscientiousness, 
              		neuroticism, 
-             		openness) 
+             		openness, 
+             		insurance_id, 
+             		insurance_id2, 
+             		insurance_id3) 
 		VALUES      ((SELECT psychologic_id_function 
-              		FROM dual), 
+              		FROM   dual), 
              		#{userId}, 
              		#{extraversion}, 
              		#{agreeableness}, 
              		#{conscientiousness}, 
              		#{neuroticism}, 
-             		#{openness})
+             		#{openness}, 
+             		#{insurance_id}, 
+             		#{insurance_id2}, 
+             		#{insurance_id3}) 
 	</insert>
 	<!-- 심리학적 보험 추천 결과 상세보기 -->
 	<select id="read">

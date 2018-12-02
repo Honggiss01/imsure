@@ -25,11 +25,11 @@ public class PsychologicResultServiceImpl implements PsychologicResultService{
 	//심리학적 보험 추천 결과 저장하기
 	@Override
 	public boolean savePsychologicResult(String userId, String extraversion, String agreeableness,
-			String conscientiousness, String neuroticism, String openness) {
+			String conscientiousness, String neuroticism, String openness, String insuranceId, String insuranceId2, String insuranceId3) {
 		
 		log.info("Saving PsychologicResult..." + userId);
 		
-		if (mapper.create(userId, extraversion, agreeableness, conscientiousness, neuroticism, openness) == 1) {
+		if (mapper.create(userId, extraversion, agreeableness, conscientiousness, neuroticism, openness, insuranceId, insuranceId2, insuranceId3) == 1) {
 			return true;
 		}
 		return false;
