@@ -49,27 +49,26 @@ public class PsychologicResultController {
 	@PostMapping(value= "/user/recommend-based-on-psychological-features",
 			consumes = "application/json; charset=UTF-8",
 			produces = { MediaType.APPLICATION_JSON_UTF8_VALUE})
-	public ResponseEntity<List<Map<String, String>>> psychologicFeatures(@RequestBody Map<String, String> info) {
+	public ResponseEntity<List<Map<String, String>>> psychologicFeatures(@RequestBody String info) {
 		
-		System.out.println("아이디"+info.get("userId"));
-		System.out.println("점수"+info.get("score"));
+		
 		Map<String, String> map = new HashMap<>();
 		List<Map<String, String>> result = new ArrayList<>();
 		
 		map.put("insuranceId", "26");
 		map.put("insuranceName", "(무)행복knowhow연금보험 1형(기본형)");
 		map.put("insuranceType", "연금보험");
-		result.add(map);
+		result.add(0, map);
 		
 		map.put("insuranceId", "27");
 		map.put("insuranceName", "(무)행복knowhow연금보험 2형(무사망급부형");
 		map.put("insuranceType", "연금보험");
-		result.add(map);
+		result.add(1, map);
 		
 		map.put("insuranceId", "26");
 		map.put("insuranceName", "(무)행복knowhow즉시연금보험");
 		map.put("insuranceType", "연금보험");
-		result.add(map);
+		result.add(2, map);
 		
 		System.out.println(result.toString());
 		
