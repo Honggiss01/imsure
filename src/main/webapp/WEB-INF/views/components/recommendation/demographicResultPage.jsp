@@ -3,6 +3,9 @@
 
 <link rel="stylesheet" type="text/css" href="resources/css/recommendation/recommendation.common.css">
 <link rel="stylesheet" type="text/css" href="resources/css/recommendation/recommendation.index.css">
+<!-- 결과 페이지 화면 구성과 보험 상세보기 부분의 css를 psychologic과 공유함, css파일명 공통으로 변경 필요 -->
+<link rel="stylesheet" type="text/css" href="resources/css/recommendation/recommendation.psychologic.css">
+<link rel="stylesheet" type="text/css" href="resources/css/recommendation/recommendation.psychologic-result.css">
 
 
 <!-- header -->
@@ -10,7 +13,8 @@
 
 <div class="container ng-scope">
   <div id="recommend" class="wrapper row">
-    <h2>미혼 여성이며 26세의 근로소득자인 OOO님의 결과 입니다.</h2>
+    <h2>OOO님의 정보는 다음과 같습니다.</h2> <!-- 동적처리 해주어야 함 -->
+    <h4 style="color:#ff0057">소득 3600만원, 연령 29세, 직업 사무종사자, 기혼, 자녀 1명, 암 가족력 없음</h4> <!-- 동적처리 해주어야 함 -->
     <div class="col-sm-12" id="result-part">
       <div class="row">
         <div class="col-sm-6">
@@ -54,6 +58,10 @@
     </div>
   </div>
 </div>
+
+<!-- 알고리즘 설명 모달 -->
+<!-- 인구통계학적 추천은 알고리즘 설명이 필요 없는지? -->
+
 <!-- 보험 상세 모달 -->
 <div class="modal fade" id="insuranceDetailModal" role="dialog">
   <div class="modal-dialog">
@@ -101,16 +109,16 @@
 <script>
 this.result
 
-  console.log(PsychologicTest.result);
+  console.log(DemographicTest.result);
   
   
   
   var ctx = document.getElementById("myChart");
   var data = {
-    labels : [ '외향성', '친화성', '성실성', '신경성', '개방성' ],
+    labels : [  '암,성인병보험', '상해재해보험', '연금보험', '저축성보험', '사망보험', '기타' ],
     datasets : [ {
-      label : '성격지표',
-      data : PsychologicTest.result,
+      label : '인구통계학 지표',
+      data : DemographicTest.result,
       fill : true,
       backgroundColor : 'rgba(255, 0, 87, 0.2)',
       borderColor : '#ff0057',
@@ -151,11 +159,12 @@ this.result
     options : options
   });
   
-  $.ajax("/user/recommend-based-on-psychological-features", {
+  
+  $.ajax("/user/recommend-based-on-demographical-features", {
     method: "post",
     data: {
       "email": "bangry123@naver.com",
-      "score":  PsychologicTest.result
+      "score":  DemographicTest.result
     },
     dataType: "json",
     success: function(data) {
