@@ -97,6 +97,79 @@
 </div>
 
 <!-- JavaScript -->
+<script src="resources/js/common/Chart.js"></script>
+<script>
+this.result
+
+  console.log(PsychologicTest.result);
+  
+  
+  
+  var ctx = document.getElementById("myChart");
+  var data = {
+    labels : [ '외향성', '친화성', '성실성', '신경성', '개방성' ],
+    datasets : [ {
+      label : '성격지표',
+      data : PsychologicTest.result,
+      fill : true,
+      backgroundColor : 'rgba(255, 0, 87, 0.2)',
+      borderColor : '#ff0057',
+      pointBackgroundColor : '#ff0057',
+      pointBorderColor : '#fff',
+      pointHoverBackgroundColor : '#fff',
+      pointHoverBorderColor : '#ff0057',
+    } ]
+  }
+  var options = {
+    scale : {
+
+      angleLines : {
+        display : false
+      },
+      ticks : {
+        beginAtZero : true,
+        min : -10,
+        max : 10,
+        stepSize : 5
+      },
+      pointLabels : {
+        fontSize : 13,
+        fontColor : "black",
+        padding : '5px'
+
+      }
+    },
+    legend : {
+      padding : "100"
+    }
+
+  }
+
+  var myRadarChart = new Chart(ctx, {
+    type : 'radar',
+    data : data,
+    options : options
+  });
+  
+  $.ajax("/user/recommend-based-on-psychological-features", {
+    method: "post",
+    data: {
+      "email": "bangry123@naver.com",
+      "score":  PsychologicTest.result
+    },
+    dataType: "json",
+    success: function(data) {
+      console.log(data.result);
+      
+      // 결과 카드 뿌려주기(물어보기)
+      var target = $(".recommendation-list").val;
+      target.appane(Insurance.listCardFormat(data));
+    },
+    error: function(data) {
+      alert('알수없는 오류가 발생했습니다.')
+    }
+  });
+</script>
 <!-- Plugins -->
 
 
