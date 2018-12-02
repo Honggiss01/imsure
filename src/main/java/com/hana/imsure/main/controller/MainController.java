@@ -73,9 +73,8 @@ public class MainController {
 	
 	@PostMapping(value= "/user/recommend-based-on-psychological-features",
 			consumes = "application/json; charset=UTF-8",
-			produces = { MediaType.TEXT_PLAIN_VALUE })
-	public ResponseEntity<String> psychologicFeatures(@RequestBody String email) {
-	
+			produces = { MediaType.APPLICATION_JSON_UTF8_VALUE})
+	public ResponseEntity<List<Map<String, String>>> psychologicFeatures(@RequestBody String email) {
 		
 		System.out.println("여기는 오나?");
 		System.out.println("받은 이메일 : " + email );
@@ -96,12 +95,12 @@ public class MainController {
 		map.put("insuranceType", "연금보험");
 		result.add(map);
 
-		String jsonStr = new Gson().toJson(result);
+		//String jsonStr = new Gson().toJson(result);
 		
-		System.out.println(jsonStr);
+		//System.out.println(jsonStr);
 		System.out.println(result.toString());
 		
-		return new ResponseEntity<>(jsonStr, HttpStatus.OK);
+		return new ResponseEntity<>(result, HttpStatus.OK);
 	}
 	
 }

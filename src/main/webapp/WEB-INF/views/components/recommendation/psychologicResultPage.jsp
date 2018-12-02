@@ -183,8 +183,11 @@
 		},
 		contentType:"application/json; charset=UTF-8",
 		success : function(data, status, xhr) {
-				console.log(data);
 				
+				console.log(data)
+				for ( var result in data) {
+					console.log(data[result].insuranceId);
+				}
 				
 				var data2 = {
 					"insuranceId" : "26",
