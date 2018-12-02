@@ -16,7 +16,7 @@ import lombok.extern.log4j.Log4j;
 @Controller
 public class MainController {
 	
-	@GetMapping("/all")
+	@GetMapping("/")
 	public String home() {
 		
 		log.debug("index.jsp called");
@@ -24,7 +24,7 @@ public class MainController {
 		return "index";
 	}
 	
-	@GetMapping("/all/mainPage")
+	@GetMapping("/mainPage")
 	public String mainPage() {
 		
 		log.debug("mainPage.jsp called");

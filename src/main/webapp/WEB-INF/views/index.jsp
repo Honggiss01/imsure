@@ -37,10 +37,10 @@
       <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
           <li class="sidebar-brand">
-            <a class="nav-a js-scroll-trigger" href="mainPage">메인</a>
+            <a class="nav-a js-scroll-trigger" href="/all/mainPage">메인</a>
           </li>
           <li class="sidebar-nav-item">
-            <a class="nav-a js-scroll-trigger" href="loginPage">
+            <a class="nav-a js-scroll-trigger" href="/all/loginPage">
              <i class="icon-login"></i>
              <span>로그인</span>
             </a>
