@@ -8,7 +8,7 @@ package com.hana.imsure.recommendation.service;
 public interface PsychologicResultService {
 	//심리학적 보험 추천 결과 저장하기
 	public boolean savePsychologicResult(String userId, String extraversion, String agreeableness, String conscientiousness,
-											String neuroticism, String openness);
+									String neuroticism, String openness, String insuranceId, String insuranceId2, String insuranceId3);
 	//심리학적 보험 추천 결과 상세보기
 	public void psychologicResultDetail(String insuranceId);
 }
