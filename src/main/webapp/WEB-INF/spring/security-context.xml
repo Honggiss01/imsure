@@ -4,12 +4,12 @@
 	xmlns:security="http://www.springframework.org/schema/security"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
-<!--
+<!-- 
 <bean id="customAccessDenied" class="kr.or.kosta.security.CustomAccessDeniedHandler"></bean>
 <bean id="customLoginSuccess" class="kr.or.kosta.security.CustomLoginSuccessHandler"></bean>
 <bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></bean>
 <bean id="customUserDetailsService" class="kr.or.kosta.security.CustomUserDetailsService"></bean>
- -->
+-->
 <!-- Spring Security(Interceptor) 설정 -->
 <security:http>
 	<!-- 페이지 등록 -->
