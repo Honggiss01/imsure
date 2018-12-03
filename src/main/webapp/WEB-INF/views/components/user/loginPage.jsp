@@ -64,5 +64,30 @@
 <script src="resources/js/user/login.js"></script>
 <script>
 
-var email = $(".email")
+
+var data = {
+        "email": $('input[name=email]').val(),
+        "password": $("input[name=password]").val()
+    };
+
+$.ajax({
+	type : "POST",
+	//dataType: "json",
+	dataType : 'text',
+	data : data,
+	url : "/all/login",
+	success : function(data) {
+ 	 
+                 if (data == 'false') { 
+                      alert('이메일 혹은 비밀번호를 확인해주십시오')
+                  } else {
+                      window.location.href = 'index.jsp';
+                  }
+              },
+              error : function(request, status, error) {
+                  alert("code:" + request.status + "\n" + "error:" + error);
+              }
+          })
+});
+
 </script>
